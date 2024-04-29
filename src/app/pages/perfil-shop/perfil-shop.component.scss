@@ -1,29 +1,57 @@
 .topo{
-    height: 17vh;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    height: 25vh;
     width: 100%;
     border: solid 1px #000000;
+    background-color: black;
 
+
+    .Voltar{
+
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+.topo-meio{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    padding-bottom: 1px;
+    
+    border: solid 1px pink;
 
 
     .title{
-        display: flex;
-        justify-content: center;
-
+        color: white;
+        
 
     }
 
     .Aberto{
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-        height: 10%;
-        width: center;
-        border: solid 10px black;
-        border-width: 70%;
-        padding: 1px ;
+        margin-top: 30px;
+        height: 20px;
+        width:150px;
+        text-align: center;
+        color: FFFFFF;
+        padding: 8px;
+        border: solid 20px black;
+        border-width: 1px;
+        background-color: lightgreen;
         
     }
 }
+
+}
+
+
+   
 
 .infos{
 
@@ -31,7 +59,7 @@
     align-items: flex-start;
     justify-content: space-between;
     height: 48vh;
-    width: calc(100vw - 18px);
+    width: calc(100vw - 27px);
     border: solid 1px #ff0000;
     padding: 8px;
 
