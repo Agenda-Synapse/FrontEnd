@@ -1,10 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Julius+Sans+One&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Julius+Sans+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
 * {
   height: 0;
   padding: 0;
+  font-style: normal;
 }
 
 :root {
@@ -16,7 +16,7 @@
 
   /*--------------font - styles---------------*/
   --second-font: "Montserrat", sans-serif;
-  --principal-font: "Josefin Sans", sans-serif;
+  --principal-font: "Julius Sans One", sans-serif;          
   --principal-font-size: 48px;
   --second-font-size: 64px;
   --button-font-size: 32px;
