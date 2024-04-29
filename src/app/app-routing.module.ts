@@ -10,6 +10,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/home/home.module').then((m) => m.HomeModule),
   },
+  { path: 'perfilShop', loadChildren: () => import('./pages/perfil-shop/perfil-shop.module').then(m => m.PerfilShopModule) },
 ];
 
 @NgModule({
