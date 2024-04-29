@@ -1,0 +1,56 @@
+.topo{
+    height: 17vh;
+    width: 100%;
+    border: solid 1px #000000;
+
+
+
+    .title{
+        display: flex;
+        justify-content: center;
+
+
+    }
+
+    .Aberto{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        height: 10%;
+        width: center;
+        border: solid 10px black;
+        border-width: 70%;
+        padding: 1px ;
+        
+    }
+}
+
+.infos{
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 48vh;
+    width: calc(100vw - 18px);
+    border: solid 1px #ff0000;
+    padding: 8px;
+
+    .left{
+        height: 75%;
+        width: 40%;
+        border: solid 1px yellow;
+        border-radius: 1rem;
+
+    }
+    
+    .right{
+
+        height: 100%;
+        width: 50%;
+        border: solid 1px green;
+
+
+
+    }
+    
+}
