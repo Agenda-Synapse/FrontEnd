@@ -1,19 +1,35 @@
-.topo{
+.topo {
+    position: relative;
+    z-index: 0;
     display: flex;
     flex-direction: column ;
     align-items: center;
     height: 25vh;
     width: 100%;
     border: solid 1px #000000;
-    background-color: black;
-
+    background-color: var(--black);
+    box-sizing: border-box;
+    
 
     .Voltar{
-
+        margin: 20px;
+        height: 20px;
+        width: 100px;
+        background-color: var(--black);
+        font-style: var(--second-font);
+        color: var(--bg-princi);
         position: absolute;
         left: 0;
         top: 0;
+        z-index: 1;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
     }
+    
+    
+    
 
 .topo-meio{
 
@@ -24,26 +40,43 @@
     height: 100%;
     width: 30%;
     padding-bottom: 1px;
-    
     border: solid 1px pink;
 
-
-    .title{
-        color: white;
+    .imagem-circular {
         
+     background-image: url('/assets/Foto Barbeiro.png');
+        width: 50px;
+        height: 50px;
+        background-color: var(--black); /* Defina a cor de fundo se necessário */
+        border-radius: 50%; /* Torna a div circular */
+        display: flex;
+        justify-content: flex-end; /* Alinha a imagem à direita */
+        align-items: center; /* Centraliza verticalmente a imagem */
+        padding-right: 10px; /* Espaçamento à direita para a imagem */
 
+    }
+    .title{
+        color: var(--bg-princi);
+        font-size: var(--principal-font-size);
+        position: absolute;
+        top: 0;
+       
+        
     }
 
     .Aberto{
-        margin-top: 30px;
-        height: 20px;
-        width:150px;
+        margin-top: 10px;
+        height: 30px;
+        width: 230px;
         text-align: center;
-        color: FFFFFF;
-        padding: 8px;
+        font-size: var(--largebutton-font-size);
+        color: var(--bg-princi);
+        padding: 10px;
         border: solid 20px black;
         border-width: 1px;
-        background-color: lightgreen;
+        background-color: var(--green);
+        position: absolute;
+        bottom: 0;
         
     }
 }
