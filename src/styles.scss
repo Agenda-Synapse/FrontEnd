@@ -7,6 +7,16 @@
   padding: 0;
 }
 
+h1{
+  display:flex;
+  flex-direction: column-reverse;
+  width: 500px;
+  font-size: var(--principal-font-size);
+  font-style: var(--principal-font);
+
+
+}
+
 :root {
   /*--------------font - styles---------------*/
   --bg-princi: #F7F7F7;
