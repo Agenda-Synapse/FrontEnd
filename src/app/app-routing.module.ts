@@ -11,6 +11,7 @@ const routes: Routes = [
       import('./pages/home/home.module').then((m) => m.HomeModule),
   },
   { path: 'perfilShop', loadChildren: () => import('./pages/perfil-shop/perfil-shop.module').then(m => m.PerfilShopModule) },
+  { path: 'hist-agenda', loadChildren: () => import('./pages/hist-agenda/hist-agenda.module').then(m => m.HistAgendaModule) },
 ];
 
 @NgModule({
