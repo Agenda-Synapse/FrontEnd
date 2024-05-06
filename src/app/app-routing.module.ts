@@ -24,6 +24,14 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/agendar/agendar.module').then((m) => m.AgendarModule),
   },
+
+  {
+    path: 'hist-agenda',
+    loadChildren: () =>
+      import('./pages/hist-agenda/hist-agenda.module').then(
+        (m) => m.HistAgendaModule
+      ),
+  },
 ];
 
 @NgModule({
