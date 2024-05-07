@@ -120,7 +120,7 @@ border: solid 1px black;
         align-items: center;
         justify-content: center;
         height: 500px;
-        width: 60%;
+        width: 80%;
         border: solid 1px black;
 
 
@@ -130,7 +130,7 @@ border: solid 1px black;
             flex-direction: row;
             justify-content: space-between;
             height: 200px;
-            width: 70%;
+            width: 90%;
             border: none;
             border-radius: 8px;
             box-shadow: 1px 1px 1px 2px lightgray;
@@ -138,7 +138,7 @@ border: solid 1px black;
 
             .procedimento{
                 height: 100px;
-                width: 100px;
+                width: 50px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -147,7 +147,7 @@ border: solid 1px black;
             .data{
 
                 height: 100px;
-                width: 100px;
+                width: 50px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -155,7 +155,7 @@ border: solid 1px black;
 
             .horario{
                 height: 100px;
-                width: 100px;
+                width: 50px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -166,7 +166,7 @@ border: solid 1px black;
             .estabelecimento{
 
                 height: 100px;
-                width: 100px;
+                width: 50px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -175,11 +175,53 @@ border: solid 1px black;
 
             .status{
 
-                 height: 100px;
-                width: 100px;
+                 height: 120px;
+                 width: 50px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+
+
+               .trash{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                height: 200px;
+                width: 20px;
+                background-color:  white;
+                border: none;
+               
+
+                img{
+
+                    height: 50px;
+                    width: 70px;
+                    border-bottom: solid 1px black;
+                    cursor: pointer;
+                }
+
+               }
+               .status-loja{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+  
+                height: 70px;
+                width: 20px;
+                background-color:  white;
+                border: none;
+
+                p{
+                    height: 50px;
+                    padding-top: 50px;
+                    border-bottom: solid 2px black;
+                    color: yellow;
+                }
+
+
+               }
+
 
             }
 
