@@ -15,11 +15,14 @@
         border: none;
         color: var(--bg-princi);
         background-color: var(--green);
+        cursor: pointer;
     
     }
     
 
     .searchbar{
+        display: flex;
+        align-items: center;
         height: 50px;
         width: 600px;
         padding-right: 100px;
@@ -33,7 +36,7 @@
             border: solid 1px black;
             border-radius: 8px;
             background-color: white;
-            padding-left: 400px;
+            padding-left: 450px;
         
         
         
@@ -55,6 +58,7 @@
                 width: 30px;
                 background-color: black;
                 border: none;
+                cursor: pointer;
                 
                 img{
                 height: 30px;
@@ -70,6 +74,7 @@
         
                 height: 30px;
                 width: 30px;
+                cursor: pointer;
         
             
             }
@@ -86,26 +91,130 @@
 
 .histagendamentos{
 display: flex;
-flex-direction: row;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+padding-top: 50px ;
 height: 600px;
 width: 100%;
 border: solid 1px black;
 
 
+
+
+
 .agendamentos{
 
     height: 500px;
-    width: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+
+    .left-agenda{
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 500px;
+        width: 60%;
+        border: solid 1px black;
+
+
+
+        .hist-1{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 200px;
+            width: 70%;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 1px 1px 1px 2px lightgray;
+
+
+            .procedimento{
+                height: 100px;
+                width: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+            }
+            .data{
+
+                height: 100px;
+                width: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .horario{
+                height: 100px;
+                width: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+            }
+
+
+            .estabelecimento{
+
+                height: 100px;
+                width: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+            }
+
+            .status{
+
+                 height: 100px;
+                width: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+            }
+
+        }
+    
+       
+        
+    
+    
+    }
+    
+    
+
+
+    .right-agenda{
+        height: 500px ;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    
+    
+        
+    .relogio{
+        height: 100px;
+        width: 100px;
+    
+    }
+    
+    }
+
 
 }
 
 
-
-
-.relogio{
-    height: 20px;
-    width: 20px;
-
-}
 
 }
