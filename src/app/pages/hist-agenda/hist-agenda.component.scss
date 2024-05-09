@@ -1,67 +1,93 @@
-.top-nav {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 120px;
-  width: 100%;
-  background-color: rgb(0, 0, 0);
-
-  .cadastro-loja {
-    height: 30px;
-    width: 130px;
-    border-radius: 4px;
-    border: none;
-    color: var(--bg-princi);
-    background-color: var(--green);
-    cursor: pointer;
-  }
-
-  .searchbar {
+.top-nav{
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    height: 50px;
-    width: 600px;
-    padding-right: 100px;
+    height: 120px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
 
-    .search-txt {
-      height: 30px;
-      width: 500px;
-      color: black;
-      border: solid 1px black;
-      border-radius: 8px;
-      background-color: white;
-      padding-left: 450px;
-    }
-  }
 
-  .botões {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: 100px;
-    width: 100px;
 
-    .botaohome {
-      height: 30px;
-      width: 30px;
-      background-color: black;
-      border: none;
-      cursor: pointer;
-
-      img {
+    .cadastro-loja{
         height: 30px;
-        width: 30px;
-      }
+        width: 130px;
+        border-radius: 4px;
+        border: none;
+        color: var(--bg-princi);
+        background-color: var(--green);
+        cursor: pointer;
+    
     }
+    
 
-    .botaoagenda {
-      height: 30px;
-      width: 30px;
-      cursor: pointer;
-    }
-  }
+    .searchbar{
+        display: flex;
+        align-items: center;
+        height: 50px;
+        width: 600px;
+        padding-right: 100px;
+        
+        
+        
+        .search-txt{
+            height: 30px;
+            width: 500px;
+            color: black;
+            border: solid 1px black;
+            border-radius: 8px;
+            background-color: white;
+            padding-left: 450px;
+        
+        
+        
+        
+        }
+        }
+        
+        .botões{
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: 100px;
+            width: 100px;
+
+            .botaohome{
+                height: 30px;
+                width: 30px;
+                background-color: black;
+                border: none;
+                cursor: pointer;
+                
+                img{
+                height: 30px;
+                width: 30px;
+                
+                }
+                
+                
+                }
+                
+                
+            .botaoagenda{
+        
+                height: 30px;
+                width: 30px;
+                cursor: pointer;
+        
+            
+            }
+
+
+        }
+        
+       
+    
 }
+
+
+
 
 // .histagendamentos{
 // display: flex;
@@ -72,100 +98,149 @@
 // width: 100%;
 // border: solid 1px black;
 
-h1 {
-  display: flex;
-  align-items: center;
-  padding: 60px;
-  padding-left: 400px;
+h1{
+display: flex;
+align-items: center;
+padding: 60px;
+padding-left: 400px;
+
+
 }
 
-.agendamentos {
-  display: flex;
-  justify-content: space-between;
-  // height: 100px;
-  padding-top: 70px;
-  width: 100%;
-  border: none;
 
-  .left-agenda {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 90%;
 
-    .hist {
-      display: flex;
-      justify-content: space-between;
-      padding-bottom: 20px;
-      margin-bottom: 30px;
-      height: 240px;
-      width: 95%;
-      border: none;
-      border-radius: 10px;
-      box-shadow: 3px 1px 3px 2px lightgray;
+.agendamentos{
 
-      .procedimento {
-        // height: 10px;
-        width: 10px;
-        padding-left: 10px;
+display: flex;
+justify-content: space-between;
+// height: 100px;
+padding-top: 70px ;
+width: 100%;
+border: none;
+
+
+    .left-agenda{
+    
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-      }
-      .data {
-        height: 100px;
-        width: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
+        align-items: flex-end;
+        width: 90%;
+     
 
-      .horario {
-        height: 100px;
-        width: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
 
-      .estabelecimento {
-        height: 80px;
-        width: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
+
+        .hist{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            height: 240px;
+            width: 95%;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 3px 1px 3px 2px lightgray;
+
+
+            .procedimento{
+                // height: 10px;
+                width: 10px;
+                padding-left: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+            }
+            .data{
+
+                height: 100px;
+                width: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .horario{
+                height: 100px;
+                width: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+            }
+
+
+            .estabelecimento{
+
+                height: 80px;
+                width: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+            }
+
+            .status{
+
+                //  height: 120px;
+                //  width: 65px;
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: space-between;
+
+               
+
+
+               }
+               .status-loja{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-right: 20px;
+                width: 50px;
+                background-color:  white;
+
+                p{
+                    height: 50px;
+                    padding-top: 50px;
+                    border-bottom: solid 2px black;
+                    color: yellow;
+                }
+
+            }
+
+        }
+    
+       
+        
+    
+    
     }
-    .status-loja {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-right: 20px;
-      width: 50px;
-      background-color: white;
+    
+    
 
-      p {
-        height: 50px;
-        padding-top: 50px;
-        border-bottom: solid 2px black;
-        color: yellow;
-      }
+
+    .right-agenda{
+        height: 500px ;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    
+    
+        
+    .relogio{
+        height: 100px;
+        width: 100px;
+    
     }
-  }
+    
+    }
+
+
 }
 
-.right-agenda {
-  height: 500px;
-  width: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  .relogio {
-    height: 100px;
-    width: 100px;
-  }
-}
 
 // }
