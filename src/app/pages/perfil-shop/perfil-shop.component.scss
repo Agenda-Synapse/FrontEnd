@@ -1,410 +1,346 @@
 .topo {
-    display: flex;
-    flex-direction: row ;
-    align-items: center;
-    justify-content: space-between;
-    height: 37vh;
-    width: calc(100% + 5px);
-    border: solid 1px #000000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 37vh;
+  width: calc(100% + 5px);
+  border: solid 1px #000000;
+  background-color: var(--black);
+
+  .Voltar {
+    width: 1px;
+    padding-bottom: 192px;
+    padding-left: 30px;
     background-color: var(--black);
+    font-family: var(--third-font);
+    color: var(--bg-princi);
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
 
-    .Voltar{
-        width: 1px;
-        padding-bottom: 192px;
-        padding-left: 30px;
-        background-color: var(--black);
-        font-style: var(--second-font);
-        color: var(--bg-princi);
-        border: none;
-        outline: none;
-        cursor: pointer;
+  .perfil-barbeiro {
+    border: none;
+    border-radius: 50%;
+    padding: 3px;
+    padding-right: 10%;
+    outline: none;
+    width: 200px;
+    height: 200px;
+    display: flex;
 
+    //    align-items: right; /* Centraliza verticalmente a imagem */
+    //    padding-right: 10px; /* Espaçamento à direita para a imagem */
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 50%;
     }
-   
+  }
 
-    .perfil-barbeiro {
-           border:none;
-           border-radius: 50%;
-           padding: 3px;
-           padding-right: 10%;
-           outline: none ;
-           width: 200px;
-           height: 200px;
-           display: flex;
-        
-        //    align-items: right; /* Centraliza verticalmente a imagem */
-        //    padding-right: 10px; /* Espaçamento à direita para a imagem */
+  .topo-meio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    height: 50px;
+    padding-bottom: 300px;
+    padding-top: 100px;
+    padding-left: 15%;
 
-        img{
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-   
-       }
-      
+    .title {
+      color: var(--bg-princi);
+      font-family: var(--second-font);
+      font-size: var(--second-font-size);
+      padding-bottom: 20px;
+      padding-right: 20px;
+    }
 
-    .topo-meio{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        border: none;
+    .info-data {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      // align-items: flex-start;
+      // padding-top: 20px;
+      // height: 10px;
+      width: 335px;
+    }
+
+    .data {
+      height: 10px;
+      font-size: 24px;
+      // display: flex;
+      // align-items: center;
+      // flex-direction: column;
+      font-family: var(--second-font);
+      color: var(--bg-princi);
+      padding: 10px;
+    }
+    .horario {
+      height: 10px;
+      font-size: 24px;
+
+      font-family: var(--second-font);
+      color: var(--bg-princi);
+      padding: 10px;
+    }
+
+    .barb-aberto {
+      display: flex;
+      justify-content: flex-start;
+      height: 10px;
+      width: 10px;
+      padding: 20px;
+
+      .Aberto {
         height: 50px;
-        padding-bottom: 300px;
-        padding-top: 100px;
-        padding-left: 15%;
-        
-
-
-        .title{
-            color: var(--bg-princi);
-            font-size: var(--principal-font-size);
-             padding-bottom: 20px;
-             padding-right: 20px;
-             
-           
-            
-        }
-
-        .info-data{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            // align-items: flex-start;
-            // padding-top: 20px;
-            // height: 10px;
-            width: 335px;
-
-
-        }
-
-
-        .data{
-            height: 10px;
-            font-size: 24px;
-            // display: flex;
-            // align-items: center;
-            // flex-direction: column;
-            font-style: var(--second-font);
-            color: var(--bg-princi);
-            padding: 10px;
-
-
-        }
-        .horario{
-            height: 10px;
-            font-size: 24px;
-    
-            font-style: var(--second-font);
-            color: var(--bg-princi);
-            padding: 10px;
-
-
-        }
-
-        .barb-aberto{
-            display: flex;
-            justify-content: flex-start;
-            height: 10px;
-            width: 10px;
-            padding: 20px;
-
-
-
-
-
-
-            .Aberto{
-            
-                height: 50px;
-                width: 100px;
-                // display: flex;
-                text-align: center;
-                padding-left: 30px;
-                padding-right: 40px;
-                font-size: var(--largebutton-font-size);
-                color: var(--bg-princi);
-                border: solid 20px black;
-                border-radius: 8px;
-                border-width: 1px;
-                background-color: var(--green);
-                
-                
-            }
-
-
-            
-            
-        }
-    }
-
-}
-
-
-   
-
-.infos{
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    height: 60vh;
-    width: calc(100vw - 28px);
-    // border: solid 1px #ff0000;
-    padding: 8px;
-
-    .left{
-        height: 80%;
-        width: 40%;
-        // border: solid 1px yellow;
-        border-radius: 2rem;
-
-
-        
-    .barbearia {
-        border:none;
-        padding: 3px;
-        padding-right: 10%;
-        outline: none ;
-        width: 100%;
-        height: 100%;
+        width: max-content;
         display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 0.5rem;
 
-
-        img{
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            border-radius: 24px;
-        }
-
-
-
+        font-size: var(--largebutton-font-size);
+        font-family: var(--second-font);
+        color: var(--bg-princi);
+        border: solid 20px black;
+        border-radius: 8px;
+        border-width: 1px;
+        background-color: var(--green);
+      }
     }
+  }
 }
-    
-    .right{
 
+.infos {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 45vh;
+  width: calc(100vw - 28px);
+  // border: solid 1px #ff0000;
+  padding: 8px;
+
+  .left {
+    height: 90%;
+    width: 40%;
+    // border: solid 1px yellow;
+    border-radius: 2rem;
+
+    .barbearia {
+      border: none;
+      padding: 3px;
+      padding-right: 10%;
+      outline: none;
+      width: 100%;
+      height: 100%;
+      display: flex;
+
+      img {
         height: 100%;
-        width: 50%;
-        
-
-
-
-        .infos-fotos{
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            height: 230px;
-            width: 450px;
-            border:solid 1px white  ;
-            border-radius: 16px;
-            box-shadow: 1px 1px 1px 2px lightgray;
-            background-color: white;
-           
-
-
-            .ferramentas{
-                border:none;
-                padding: 10px;
-                outline: none ;
-                width: 150px;
-                height: 100px;
-        
-            }
-                img{
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                    border-radius: 1rem;
-                }
-
-                .corte{
-                    border:none;
-                    padding: 10px;
-                    outline: none ;
-                    width: 150px;
-                    height: 100px;
-              
-            
-                }
-                    img{
-                        height: 100%;
-                        width: 100%;
-                        object-fit: cover;
-                        border-radius: 1rem;
-                    }
-
-                    .espelhos{
-                        border:none;
-                        padding: 10px;
-                        outline: none ;
-                        width: 150px;
-                        height: 100px;
-                     
-                
-                    }
-                        img{
-                            height: 100%;
-                            width: 100%;
-                            object-fit: cover;
-                            border-radius: 1rem;
-                        }
-
-
-        }
-
-
-.info-textos{
-    height: 106px;
-    width: 207px;
-    padding-top: 24px;
-    padding-bottom: 1px;
-
-
-    .h2{
-        font-style: var(--principal-font-size);
-        
-        
-        }
-}
-
+        width: 100%;
+        object-fit: cover;
+        border-radius: 24px;
+      }
     }
-    
-}
+  }
 
+  .right {
+    height: 100%;
+    width: 50%;
 
+    .infos-fotos {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      height: 230px;
+      width: 450px;
+      border: solid 1px white;
+      border-radius: 16px;
+      box-shadow: 1px 1px 1px 2px lightgray;
+      background-color: white;
 
-.serviços{
-    display: flex;
-    justify-content: space-between;
-    height: 500px;
-    width: calc(100% - 15px);
-    padding: 10px;
-    padding-bottom: 100px;
+      .ferramentas {
+        border: none;
+        padding: 10px;
+        outline: none;
+        width: 150px;
+        height: 100px;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
 
+      .corte {
+        border: none;
+        padding: 10px;
+        outline: none;
+        width: 150px;
+        height: 100px;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
 
-
-
-    .H1{
-        font-size:  var(--principal-font-size);
-
+      .espelhos {
+        border: none;
+        padding: 10px;
+        outline: none;
+        width: 150px;
+        height: 100px;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
     }
 
-.cards-left{
+    .info-textos {
+      height: 106px;
+      width: 207px;
+      padding-top: 24px;
+      padding-bottom: 1px;
+
+      p {
+        font-family: var(--second-font);
+        color: var(--gray);
+      }
+
+      h2 {
+        font-family: var(--fourth-font);
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.serviços {
+  display: flex;
+  justify-content: space-between;
+  height: 500px;
+  width: calc(100% - 15px);
+  padding: 10px;
+  padding-bottom: 100px;
+
+  h1 {
+    font-family: var(--second-font);
+    font-size: var(--second-font-size);
+    font-weight: 600;
+  }
+
+  .cards-left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     height: 100%;
     width: 50%;
-    padding-top: 50px  ;
+    padding-top: 50px;
     padding-right: 20px;
 
-
-    .card-1{
-        height: 150px;
-        width: 450px;
-        display: flex;
-        flex-direction: row;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 1px 1px 1px 2px lightgray;
-
-
-        .card-service-1{
-            height: 100px;
-            width: 1px;
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-                
-                
-            }
-            
-            .card-time-1{
-
-                height: 100px;
-                width: 1px;
-                display: flex;
-                justify-content: space-between;
-                flex-direction: column;
-                padding-left: 200px;
-
-    
-            }
-
-            .card-price-1{
-
-            height: 100px;
-            width: 1px;
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            padding-left: 200px;
-
-
-
-        }
+    .categs{
+      font-family: var(--second-font);
     }
-    
-    .card-2{
-        height: 150px;
-        width: 450px;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: row;
-        padding: 20px;
-        box-shadow: 1px 1px 1px 2px lightgray;
-        padding: 20px;
 
-
-
-        .card-service-2{
-            height: 100px;
-            width: 1px;
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-
-
-
-        }
-
-        .card-time-2{
-            
-            height: 100px;
-            width: 1px;
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            padding-left: 200px;
- 
-
-        }
-
-        .card-price-2{
-
-            height: 100px;
-            width: 1px;
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            padding-left: 200px;
-        }
-
-
+    .specs{
+      font-family: var(--fourth-font);
+      font-weight: 400;
     }
-    
 
-    
-}
+    .values{
+      font-family: var(--fourth-font);
+      font-weight: 400;
+    }
 
+    .card-1 {
+      height: 150px;
+      width: 450px;
+      display: flex;
+      flex-direction: row;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 1px 1px 1px 2px lightgray;
 
-.cards-right{
+      .card-service-1 {
+        height: 100px;
+        width: 1px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+      }
+
+      .card-time-1 {
+        height: 100px;
+        width: 1px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-left: 200px;
+      }
+
+      .card-price-1 {
+        height: 100px;
+        width: 1px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-left: 200px;
+      }
+    }
+
+    .card-2 {
+      height: 150px;
+      width: 450px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: row;
+      padding: 20px;
+      box-shadow: 1px 1px 1px 2px lightgray;
+      padding: 20px;
+
+      .card-service-2 {
+        height: 100px;
+        width: 1px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+
+      .card-time-2 {
+        height: 100px;
+        width: 1px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-left: 200px;
+      }
+
+      .card-price-2 {
+        height: 100px;
+        width: 1px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-left: 200px;
+      }
+    }
+  }
+
+  .cards-right {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -413,104 +349,90 @@
     width: 50%;
     padding-top: 100px;
 
+    .categs{
+      font-family: var(--second-font);
+    }
 
+    .specs{
+      font-family: var(--fourth-font);
+      font-weight: 400;
+    }
 
-.card-3{
-    height: 150px;
-    width: 450px;
-    display: flex;
-    flex-direction: row;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 1px 1px 1px 2px lightgray;
-    padding-top: 8px;
+    .values{
+      font-family: var(--fourth-font);
+      font-weight: 400;
+    }
 
+    .card-3 {
+      height: 150px;
+      width: 450px;
+      display: flex;
+      flex-direction: row;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 1px 1px 1px 2px lightgray;
+      padding-top: 8px;
 
-    .card-service-3{
+      .card-service-3 {
         height: 100px;
         width: 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-                 
-        }
-        
-        .card-time-3{
+      }
 
-            height: 100px;
-            width: 1px;
-            display: flex;
-            flex-direction: column;
-            padding-left: 150px;
-            justify-content: space-between;
+      .card-time-3 {
+        height: 100px;
+        width: 1px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 150px;
+        justify-content: space-between;
+      }
 
-            
-
-        }
-
-        .card-price-3{
-
+      .card-price-3 {
         height: 100px;
         width: 1px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding-left: 150px;
-
-
+      }
     }
 
+    .card-4 {
+      height: 150px;
+      width: 450px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: row;
+      padding: 20px;
+      box-shadow: 1px 1px 1px 2px lightgray;
 
+      .card-service-4 {
+        height: 100px;
+        width: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
 
-
+      .card-price-4 {
+        height: 100px;
+        width: 1px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 150px;
+      }
+      .card-time-4 {
+        height: 100px;
+        width: 1px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 150px;
+      }
+    }
+  }
 }
-
-.card-4{
-    height: 150px;
-    width: 450px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    box-shadow: 1px 1px 1px 2px lightgray;
-
-.card-service-4{
-    height: 100px;
-    width: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
-.card-price-4{
-    
-    height: 100px;
-    width: 1px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-left: 150px;
-
-
-
-}
-.card-time-4{ 
-    height: 100px;
-    width: 1px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-left: 150px;
-
-}
-
-}
-
-}
-
-
-
-}
-
-    

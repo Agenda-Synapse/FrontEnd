@@ -1,0 +1,101 @@
+.top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 17vh;
+  width: 100%;
+  background-color: var( --black);
+
+  .left{
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    padding: 0.5rem 0 0 0.5rem;
+
+    .back-btn{
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+    }
+  }
+
+  .center-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 60%;
+
+    p{
+      font-family: var(--principal-font);
+      font-size: var(--principal-font-size);
+    }
+  }
+
+  .perfil-img{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+    height: 115px;
+    width: 115px;
+
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 20rem;
+    }
+  }
+}
+
+.center{
+  display: flex;
+  height: 60vh;
+  width: 100vw;
+  margin-top: 2%;
+
+  background-color: #00407c;
+
+  .dtHr{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2% 0 0 2%;
+    row-gap: 4%;
+
+    h3{
+      font-family: var(--principal-font);
+      width: max-content;
+    }
+
+    .inserts{
+      display: flex;
+      background-color: var(--black);
+      width: max-content;
+      padding: 1rem;
+      border-radius: 1rem;
+
+      .changes{
+        display: flex;
+        flex-direction: column;
+
+        .fields{
+          display: flex;
+          flex-direction: column;
+
+          label{
+            margin-bottom: 0.5rem;
+          }
+
+          input{
+            height: 2rem;
+            width: 18rem;
+            border-radius: 0.25rem;
+            margin-bottom: 1rem;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}

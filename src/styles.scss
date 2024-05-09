@@ -1,10 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Julius+Sans+One&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Julius+Sans+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Lexend+Exa:wght@100..900&family=Montserrat:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-  height: 0;
+  margin: 0;
   padding: 0;
+  font-style: normal;
 }
 
 h1{
@@ -22,13 +22,17 @@ h1{
   --bg-princi: #F7F7F7;
   --green: #28C28B;
   --black: #222222;
+  --gray: #707070;
 
 
   /*--------------font - styles---------------*/
+  --fourth-font: "Poppins", sans-serif;
+  --third-font: "Lexend Exa", sans-serif;
   --second-font: "Montserrat", sans-serif;
-  --principal-font: "Josefin Sans", sans-serif;
-  --principal-font-size: 48px;
-  --second-font-size: 64px;
+  --principal-font: "Julius Sans One", sans-serif;
+  --principal-font-size: 26px;
+  --third-font-size: 26px;
+  --second-font-size: 40px;
   --button-font-size: 32px;
   --largebutton-font-size: 30px;
   --subtitle-font-size: 40px;
