@@ -1,45 +1,49 @@
-.top{
+.top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 17vh;
   width: 100%;
-  background-color: var( --black);
+  background-color: var(--black);
 
-  .left{
+  .left {
     display: flex;
     align-items: flex-start;
     height: 100%;
     padding: 0.5rem 0 0 0.5rem;
 
-    .back-btn{
+    .back-btn {
       cursor: pointer;
       border: none;
       background-color: transparent;
     }
   }
 
-  .center-top{
+  .center-top {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     height: 60%;
 
-    p{
+    h1 {
+      text-align: center;
+    }
+
+    p {
       font-family: var(--principal-font);
       font-size: var(--principal-font-size);
     }
   }
 
-  .perfil-img{
+  .perfil-img {
     display: flex;
     flex-direction: column;
     margin-right: 10%;
     height: 115px;
     width: 115px;
 
-    img{
+    img {
       height: 100%;
       width: 100%;
       object-fit: cover;
@@ -48,46 +52,46 @@
   }
 }
 
-.center{
+.center {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 60vh;
   width: 100vw;
   margin-top: 2%;
 
-  background-color: #00407c;
-
-  .dtHr{
+  .dtHr {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 2% 0 0 2%;
+    padding: 0 0 0 2%;
     row-gap: 4%;
 
-    h3{
+    h3 {
       font-family: var(--principal-font);
       width: max-content;
     }
 
-    .inserts{
+    .inserts {
       display: flex;
       background-color: var(--black);
       width: max-content;
       padding: 1rem;
       border-radius: 1rem;
 
-      .changes{
+      .changes {
         display: flex;
         flex-direction: column;
 
-        .fields{
+        .fields {
           display: flex;
           flex-direction: column;
 
-          label{
+          label {
             margin-bottom: 0.5rem;
           }
 
-          input{
+          input {
             height: 2rem;
             width: 18rem;
             border-radius: 0.25rem;
@@ -96,6 +100,39 @@
           }
         }
       }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2% 0 0;
+    height: 45vh;
+
+    .your {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 15%;
+      width: 30vw;
+      border-radius: 0.5rem 0.5rem 0 0;
+      background-color: var(--green);
+
+      .title {
+        font-family: var(--second-font);
+        color: var(--bg-princi);
+        font-size: var(--largebutton-font-size);
+        height: max-content;
+      }
+    }
+
+    .visu {
+      display: flex;
+      height: 75%;
+      width: calc(100% - 2px);
+      border-right: solid 1px #000000;
+      border-bottom: solid 1px #000000;
+      border-left: solid 1px #000000;
     }
   }
 }
