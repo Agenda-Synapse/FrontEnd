@@ -66,15 +66,14 @@
 h1 {
   display: flex;
   align-items: center;
-  padding: 60px;
+  padding: 50px;
   padding-left: 400px;
 }
 
 .agendamentos {
   display: flex;
   justify-content: space-between;
-  // height: 100px;
-  padding-top: 70px;
+  padding-top: 30px;
   width: 100%;
   border: none;
 
@@ -90,7 +89,7 @@ h1 {
       justify-content: space-between;
       padding-bottom: 20px;
       margin-bottom: 30px;
-      height: 240px;
+      height: 100px;
       width: 95%;
       border: none;
       border-radius: 10px;
@@ -147,7 +146,7 @@ h1 {
 }
 
 .right-agenda {
-  height: 500px;
+  // height: 500px;
   width: 40%;
   display: flex;
   justify-content: center;
