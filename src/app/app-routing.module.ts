@@ -32,6 +32,7 @@ const routes: Routes = [
         (m) => m.HistAgendaModule
       ),
   },
+  { path: 'loginprop', loadChildren: () => import('./pages/loginprop/loginprop.module').then(m => m.LoginpropModule) },
 ];
 
 @NgModule({
