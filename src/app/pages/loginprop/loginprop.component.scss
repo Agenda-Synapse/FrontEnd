@@ -2,13 +2,15 @@
 nav {
   height: 100px;
   width: 100%;
+  background-color: var(--bg-princi);
 
   .back {
     border: none;
-    background-color: white;
+    background-color: var(--bg-princi);
     padding-left: 20px;
     font-family: var(--third-font);
     font-size: var(--third-font-size);
+    cursor: pointer;
   }
 }
 
@@ -19,6 +21,7 @@ nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  background-color: var(--bg-princi);
 
   .login {
     height: max-content;
@@ -27,6 +30,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 
     .input {
       display: flex;
@@ -34,6 +38,8 @@ nav {
       justify-content: space-between;
       padding: 10px;
       gap: 10px;
+      
+      
 
       label {
         padding-left: 10px;
@@ -45,22 +51,24 @@ nav {
         width: 100%;
         border-radius: 4px;
         border-color: lightgray;
+        box-shadow: 0 4px 4px 0 #0000003b
+
       }
     }
 
     .esqueci-a-senha {
       padding-top: 5px;
       padding-left: 20px;
-      background-color: white;
+      background-color: var(--bg-princi);
       border: none;
       font-family: var(--fourth-font);
       font-size: 14px;
+      cursor: pointer;
     }
 
     .bottom-login {
       height: max-content;
       width: max-content;
-      //para comitaaaaaaaaaaaaaaaaaaarrrrrrrrrrrrrrr
       margin-top: 20px;
       gap: 30px;
       display: flex;
@@ -70,24 +78,26 @@ nav {
       .btn-login {
         height: max-content;
         width: 390px;
-        padding: 18px;
+        padding: 10px;
         border-radius: 4px;
         border-style: hidden;
         background-color: var(--green);
         color: var(--bg-princi);
         font-family: var(--second-font);
         font-size: var(--largebutton-font-size);
+        cursor: pointer;
       }
       .btn-cadastrar {
         height: max-content;
         width: 390px;
-        padding: 18px;
+        padding: 10px;
         border-radius: 4px;
         border-color: #3488ec;
         color: #3488ec;
         background-color: var(--bg-princi);
         font-family: var(--second-font);
         font-size: var(--largebutton-font-size);
+        cursor: pointer;
       }
     }
   }
@@ -119,40 +129,14 @@ nav {
     }
 
     .icon {
+      height: max-content;
       width: 70%;
       display: flex;
-      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      
 
-      .megafone {
-        height: 300px;
-        width: 300px;
-      }
-
-      .icons {
-        display: flex;
-        flex-direction: column;
-        height: max-content;
-        width: 90%;
-
-        .flash-1 {
-          height: 140px;
-          width: 140px;
-          transform: rotate(-10deg);
-        }
-
-        .flash-2 {
-          height: 140px;
-          width: 140px;
-          transform: rotate(45deg);
-          background-color: none;
-        }
-
-        .flash-3 {
-          height: 140px;
-          width: 140px;
-          transform: rotate(70deg);
-        }
+    
       }
     }
   }
-}
