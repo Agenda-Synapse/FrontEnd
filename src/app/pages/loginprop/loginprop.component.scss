@@ -17,16 +17,14 @@ nav{
 
 .login-principal{
     height: max-content;
-    width:100%;
-    // padding: 10px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .login{
         height: max-content;
-        width: 40%;
-        padding: 20px;
+        width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -37,6 +35,7 @@ nav{
             flex-direction: column;
             justify-content: space-between;
             padding: 10px;
+            padding-left: 20px;
             gap: 10px;
             
 
@@ -47,9 +46,8 @@ nav{
 
             
             .form-control{
-                padding: 10px;
-                padding-right: 100px;
-                width: 100%;
+                padding: 15px;
+                width: 80%;
                 border-radius: 4px;
                 border-color: lightgray;
 
@@ -75,7 +73,6 @@ nav{
             height: max-content;
             width: max-content;
             padding: 50px;
-            // padding-top: 20px;
             gap: 30px;
             display: flex;
             flex-direction: column;
@@ -113,7 +110,6 @@ nav{
     .textos-img{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
         height: max-content;
         width: 50%;
@@ -121,12 +117,12 @@ nav{
         .textos-help{
             height: max-content;
             width: 90%;
-            justify-content: space-between;
-            display: flex;
-            align-items: center;
+            justify-content: space-evenly;
+            display: flex;  
+            flex-wrap: wrap;
+            align-items: flex-start;
             font-family: var(--second-font);
             font-size: var(--second-font-size);
-
 
         }
 
@@ -134,46 +130,8 @@ nav{
             width: 70%;
             display: flex;
             align-items: center;
-            
-        .megafone{
-            height: 300px;
-            width: 300px;
-            
-
-        } 
-
-        .icons{
-            display: flex;
-            flex-direction: column;
-            height: max-content;
-            width: 90%;
-
-            .flash-1{
-                
-                height: 140px;
-                width: 140px;
-                transform: rotate(-10deg);
-            }
-            
-            .flash-2{
-                
-                height: 140px;
-                width: 140px;
-                transform: rotate(45deg);
-                background-color: none;
-
               
-            }
-
-            
-            .flash-3{
-                
-                height: 140px;
-                width: 140px;
-                transform: rotate(70deg);
-            }
-
-        }
+       
 
         }
 
