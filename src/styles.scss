@@ -11,7 +11,7 @@ h1{
   display:flex;
   flex-direction: column-reverse;
   width: 500px;
-  font-size: var(--principal-font-size);
+  font-size: 60px;
   font-style: var(--principal-font);
 
 
@@ -41,4 +41,6 @@ h1{
 
 input {
   box-sizing: border-box;
+  border: none;
+  outline: 0;
 }
