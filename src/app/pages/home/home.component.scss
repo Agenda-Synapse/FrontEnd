@@ -63,7 +63,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  height: 90vh;
+  height: max-content;
   background-color: var(--bg-princi);
   align-items: center;
 
