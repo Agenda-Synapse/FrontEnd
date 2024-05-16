@@ -25,28 +25,28 @@
     <h3 class="es">Estabelecimentos</h3>
   </div>
   <div class="cards">
-    <div class="card-shop">
+    <div class="card-shop" *ngFor="let loja of cards ">
       <div class="parte1">
         <!-- <div class="bruno"> -->
           <img
             class="fachada"
-            src="https://scontent.fmii2-2.fna.fbcdn.net/v/t1.6435-9/89307165_2580692872200404_7671234060819103744_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=dB8mz2hbhK4Q7kNvgGSyED-&_nc_oc=AdhGToMeIikGB3qrZQm-aiqe082fTMl4Tm7y8sXPhMLs1DfLHwOlZDnaBd8Cqi6wHJpXI23NHl2j_r2lWVbBtkjR&_nc_ht=scontent.fmii2-2.fna&oh=00_AYCNrRcjgIVSQoU2DR_tQnw2gOoDK8Sww4UOLwvUCNw4kA&oe=666AB1CE"
+            src="{{loja.imagemUrl}}"
             alt="Fachada"
           />
         <!-- </div> -->
       </div>
       <div class="parte2">
         <div class="nome">
-          <p class="nome-shop">Barbearia do JV</p>
+          <p class="nome-shop">{{loja.nome}}</p>
         </div>
         <div class="ender">
           <p class="title-end">Endereço:</p>
-          <p class="end-shop">Rua João Nunes, 123</p>
+          <p class="end-shop">{{loja.endereco}}</p>
         </div>
       </div>
       <div class="parte3">
-        <p class="status">{{"Aberto" | uppercase}}</p>
-        <p class="tipo">Barbeiro</p>
+        <p class="status">{{loja.status| uppercase}}</p>
+        <p class="tipo">{{loja.tipo}}</p>
       </div>
     </div>
   </div>
