@@ -158,7 +158,7 @@
           display: flex;
           height: 55%;
           width: 100%;
-          
+
           .nome-shop{
             height: max-content;
             font-family: var(--second-font);
@@ -169,7 +169,7 @@
             border-bottom: solid 1px var(--gray);
           }
         }
-        
+
         .ender{
           display: flex;
           flex-direction: column;
@@ -177,16 +177,15 @@
           width: 100%;
 
           .title-end{
-            font-family: var(--second-font);
+            font-family: var(--fourth-font);
             font-size: 1rem;
-            color: var(--black);
+            color: var(--gray);
           }
 
           .end-shop{
             font-family: var(--second-font);
             font-size: 1.25rem;
             color: var(--black);
-            margin-top: 3%;
           }
         }
       }
