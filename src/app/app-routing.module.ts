@@ -26,7 +26,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'hist-agenda',
+    path: 'histAgenda',
     loadChildren: () =>
       import('./pages/hist-agenda/hist-agenda.module').then(
         (m) => m.HistAgendaModule

@@ -150,7 +150,45 @@
 
       .parte2{
         display: flex;
+        flex-direction: column;
+        width: 60%;
+        height: 100%;
+
+        .nome{
+          display: flex;
+          height: 55%;
+          width: 100%;
+          
+          .nome-shop{
+            height: max-content;
+            font-family: var(--second-font);
+            font-size: 1.75rem;
+            font-weight: 500;
+            color: var(--black);
+            margin-top: 6%;
+            border-bottom: solid 1px var(--gray);
+          }
+        }
         
+        .ender{
+          display: flex;
+          flex-direction: column;
+          height: 45%;
+          width: 100%;
+
+          .title-end{
+            font-family: var(--second-font);
+            font-size: 1rem;
+            color: var(--black);
+          }
+
+          .end-shop{
+            font-family: var(--second-font);
+            font-size: 1.25rem;
+            color: var(--black);
+            margin-top: 3%;
+          }
+        }
       }
     }
   }
