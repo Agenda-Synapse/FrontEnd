@@ -58,7 +58,6 @@
   align-items: center;
   height: 60vh;
   width: 100vw;
-  margin-top: 2%;
 
   .dtHr {
     display: flex;
@@ -133,6 +132,30 @@
       border-right: solid 1px #000000;
       border-bottom: solid 1px #000000;
       border-left: solid 1px #000000;
+    }
+  }
+}
+
+.foot{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: end;
+  justify-content: end;
+  height: 23vh;
+  width: 100vw;
+  background-color: #3c33c3;
+
+  .continue{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+    font-family: var(--second-font);
+    color: var(--black);
+    margin: 0 1rem 1rem 0;
+
+    &:hover{
+      cursor: pointer;
     }
   }
 }
