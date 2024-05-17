@@ -1,3 +1,5 @@
+<!-- para commitar -->
+
 <div class="top">
   <button class="btn-cad">Cadastrar loja</button>
   <div class="search-bar">
@@ -12,12 +14,44 @@
 <div class="content">
   <h1 class="agende">Agende quando quiser, de onde estiver!</h1>
   <div class="cats">
-    <img class="cat-img" src="../../../assets/unhas.svg" alt="Unhas">
-    <img class="cat-img" src="../../../assets/barbearia.svg" alt="Barbearia">
-    <img class="cat-img" src="../../../assets/maquiagem.svg" alt="Maquiagem">
-    <img class="cat-img" src="../../../assets/salao de beleza.svg" alt="Salão de Beleza">
+    <img class="cat-img" src="../../../assets/unhas.svg" alt="Unhas" />
+    <img class="cat-img" src="../../../assets/barbearia.svg" alt="Barbearia" />
+    <img class="cat-img" src="../../../assets/maquiagem.svg" alt="Maquiagem" />
+    <img
+      class="cat-img"
+      src="../../../assets/salao de beleza.svg"
+      alt="Salão de Beleza"
+    />
   </div>
   <div class="estabs">
-    <h3 class="es" >Estabelecimentos</h3>
+    <h3 class="es">Estabelecimentos</h3>
+  </div>
+  <div class="cards">
+    <div class="card-shop" *ngFor="let loja of cards ">
+      <div class="parte1">
+        <!-- <div class="bruno"> -->
+          <img
+            class="fachada"
+            src="{{loja.imagemUrl}}"
+            alt="Fachada"
+          />
+        <!-- </div> -->
+      </div>
+      <div class="parte2">
+        <div class="nome">
+          <p class="nome-shop">{{loja.nome}}</p>
+        </div>
+        <div class="ender">
+          <p class="title-end">Endereço:</p>
+          <p class="end-shop">{{loja.endereco}}</p>
+        </div>
+      </div>
+      <div class="parte3">
+        <p class="status">{{loja.status| uppercase}}</p>
+        <p class="tipo">{{loja.tipo}}</p>
+      </div>
+    </div>
   </div>
 </div>
+
+<!-- apenas para commitar -->
