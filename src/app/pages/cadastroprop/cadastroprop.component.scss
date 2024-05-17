@@ -1,0 +1,93 @@
+nav {
+    height: 100px;
+    width: 100%;
+    background-color: var(--bg-princi);
+  
+    .back {
+      border: none;
+      background-color: var(--bg-princi);
+      padding-left: 20px;
+      font-family: var(--third-font);
+      font-size: var(--third-font-size);
+      cursor: pointer;
+    }
+  }
+
+  .cadastro-principal{
+
+    height: max-content;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--bg-princi);
+
+    .cadastro-pessoa{
+
+    height: max-content;
+    width: calc(40% - 40px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .input {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px;
+        gap: 10px;
+        
+        
+  
+        label {
+          padding-left: 10px;
+        }
+  
+        .form-control {
+          padding: 10px;
+          padding-right: 100px;
+          width: 100%;
+          border-radius: 4px;
+          border-color: lightgray;
+          box-shadow: 0 4px 4px 0 #0000003b
+  
+        }
+      }
+    }
+  }
+
+  .container-end{
+    height: max-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    background-color: var(--bg-princi);
+
+    .etapas{
+      height: fit-content;
+      width: 8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .proxima{
+
+      width: 20%;
+
+      .proxima-etapa{
+
+        width: 200px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+  
+      }
+    }
+
+
+  }
