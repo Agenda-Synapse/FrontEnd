@@ -139,8 +139,8 @@
 .foot{
   display: flex;
   flex-direction: row-reverse;
-  align-items: end;
-  justify-content: end;
+  align-items: flex-end;
+  justify-content: flex-start;
   height: 23vh;
   width: 100vw;
   background-color: #3c33c3;
