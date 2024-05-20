@@ -46,6 +46,7 @@
         justify-content: space-between;
         padding: 10px;
         gap: 10px;
+        font-family: var(--fourth-font);
         
         
   
@@ -106,10 +107,10 @@
     
 
   .container-end{
-    height: 100px;
+    height: 120px;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: last baseline;
     width: 100%;
     background-color: var(--bg-princi);
 
@@ -175,7 +176,7 @@
 
     }
     
-
+    
     .proxima{
       height: max-content;
       width: calc(30% - 0px);
@@ -203,8 +204,9 @@
   }
 
 }
+.container-2{
 
-nav {
+  nav {
     height: 100px;
     width: 100%;
     background-color: var(--bg-princi);
@@ -219,7 +221,7 @@ nav {
     }
   }
 
-  .cadastro-principal{
+  .cadastro-principal-2{
 
     height: max-content;
     width: 100%;
@@ -229,7 +231,7 @@ nav {
     background-color: var(--bg-princi);
 
 
-    .cadastro-pessoa{
+    .cadastro-estabelecimento{
 
     height: max-content;
     width: calc(60% - 40px);
@@ -246,6 +248,7 @@ nav {
         justify-content: space-between;
         padding: 10px;
         gap: 10px;
+        font-family: var(--fourth-font);
         
         
   
@@ -265,21 +268,40 @@ nav {
       }
     }
 
-    .texto-imagem{
+
+    .adicionarfoto{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: solid 1px var(--black);
+      border-radius: 20px;
+      height: 230px;
+      width: 500px;
+
+      .buttonadicionarfoto{
+        border: none;
+        background-color: var(--bg-princi);
+        cursor: pointer;
+      }
+    
+
+    }
+
+    .texto-imagem-2{
       display: flex;
       flex-direction: column;
       align-items: center;
       height: max-content;
       width: 100%;
 
-      .montarPerfil{
+      .definaEstabelecimento{
         display: flex;
         flex-direction: column;
         align-items: center;
         height: max-content;
         width: 20%;
   
-        .text-perfil{
+        .text-estabelecimento{
           height: 156px;
           width: 313px;
           display: flex;
@@ -288,14 +310,12 @@ nav {
           font-size: var(--second-font-size);
           font-family: var(--second-font);
           
-          .text-perfil2{
+          .text-estabelecimento2{
             font-size: var(--second-font-size);
             font-family: var(--second-font);
           }
        
     }
-
-      
 
 
       }
@@ -305,11 +325,11 @@ nav {
     }
     
 
-  .container-end{
-    height: 100px;
+  .container2-end{
+    height: 120px;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: last baseline ;
     width: 100%;
     background-color: var(--bg-princi);
 
@@ -349,7 +369,8 @@ nav {
           justify-content: center;
           align-items: center;
           border-radius: 50%;
-          background-color: var(--gray);
+          color: var(--bg-princi);
+          background-color: var(--green);
           font-family: var(--fourth-font);
           font-size: 14px;
 
@@ -401,3 +422,4 @@ nav {
 
 
   }
+}
