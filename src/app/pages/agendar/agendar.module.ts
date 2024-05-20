@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AgendarRoutingModule } from './agendar-routing.module';
 import { AgendarComponent } from './agendar.component';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 
 @NgModule({
@@ -11,7 +13,12 @@ import { AgendarComponent } from './agendar.component';
   ],
   imports: [
     CommonModule,
-    AgendarRoutingModule
+    AgendarRoutingModule,
+    NgbPaginationModule, 
+    NgbAlertModule,
+    ComponentsModule
   ]
 })
-export class AgendarModule { }
+export class AgendarModule {
+
+}

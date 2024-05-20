@@ -1,3 +1,6 @@
+# Antes de rodar...
+em node_modules\bootstrap\dist\css\bootstrap.css apagar todo o conteudo do arquivo, para nao quebrar a formataçao geral
+
 # FrontAgenda
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
