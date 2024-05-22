@@ -137,12 +137,38 @@
 
     .visu {
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       height: 75%;
-      width: calc(100% - 2px);
+      width: 100%;
       background-color: #ffffff;
       border-right: solid 1px #000000;
       border-bottom: solid 1px #000000;
       border-left: solid 1px #000000;
+
+      .proc{
+        display: flex;
+        width: 90%;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 1rem 0 1rem 0;
+        border-bottom: solid 1px var(--black);
+
+        .procedimento{
+          font-family: var(--fourth-font);
+          margin-bottom: .25rem;
+          color: var(--gray);
+        }
+
+        .proc-nome{
+          font-family: var(--second-font);
+          margin-bottom: .25rem;
+          color: var(--black);
+          font-weight: 500;
+          font-size: 3vh;
+        }
+      }
     }
   }
 }
@@ -163,7 +189,11 @@
     padding: .5rem;
     font-family: var(--second-font);
     color: var(--black);
+    font-weight: 600;
+    font-size: 3.25vh;
     margin: 0 1rem 1rem 0;
+    border: none;
+    background-color: transparent;
 
     &:hover{
       cursor: pointer;

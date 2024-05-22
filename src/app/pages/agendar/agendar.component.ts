@@ -10,6 +10,11 @@ import { ModalConfirmarComponent } from 'src/app/components/modal-confirmar/moda
 export class AgendarComponent {
   constructor( public modalService: NgbModal){}
 
+  data: String = "11/09/2001";
+  hour: String = "00:00";
+
+
+
   openModal() {
     const modalRef = this.modalService.open(ModalConfirmarComponent);
   }
