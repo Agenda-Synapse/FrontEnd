@@ -1,6 +1,4 @@
-
-.container-1{
-
+.container-1 {
   height: max-content;
   width: 100%;
 
@@ -8,7 +6,7 @@
     height: 100px;
     width: 100%;
     background-color: var(--bg-princi);
-  
+
     .back {
       border: none;
       background-color: var(--bg-princi);
@@ -17,10 +15,12 @@
       font-size: var(--third-font-size);
       cursor: pointer;
     }
+    .back:hover {
+      transform: scale(1.1);
+    }
   }
 
-  .cadastro-principal{
-
+  .cadastro-principal {
     height: max-content;
     width: 100%;
     display: flex;
@@ -28,59 +28,58 @@
     align-items: center;
     background-color: var(--bg-princi);
 
+    .cadastro-pessoa {
+      height: max-content;
+      width: calc(60% - 40px);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
 
-    .cadastro-pessoa{
-
-    height: max-content;
-    width: calc(60% - 40px);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-
-    .input {
+      .input {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 10px;
         gap: 10px;
         font-family: var(--fourth-font);
-        
-        
-  
+
         label {
           padding-left: 10px;
         }
-  
+
         .form-control {
           padding: 10px;
           padding-right: 100px;
           width: 100%;
           border-radius: 4px;
           border-color: lightgray;
-          box-shadow: 0 4px 4px 0 #0000003b
-  
+          box-shadow: 0 4px 4px 0 #0000003b;
+        }
+
+        .form-control:hover {
+          transform: scale(1.1);
+          cursor: pointer;
         }
       }
     }
 
-    .texto-imagem{
+    .texto-imagem {
       display: flex;
       flex-direction: column;
       align-items: center;
       height: max-content;
       width: 100%;
 
-      .montarPerfil{
+      .montarPerfil {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: max-content;
         width: 20%;
-  
-        .text-perfil{
+
+        .text-perfil {
           height: 156px;
           width: 313px;
           display: flex;
@@ -88,25 +87,17 @@
           align-items: center;
           font-size: var(--second-font-size);
           font-family: var(--second-font);
-          
-          .text-perfil2{
+
+          .text-perfil2 {
             font-size: var(--second-font-size);
             font-family: var(--second-font);
           }
-       
-    }
-
-      
-
-
+        }
       }
-
     }
+  }
 
-    }
-    
-
-  .container-end{
+  .container-end {
     height: 120px;
     display: flex;
     justify-content: space-evenly;
@@ -114,22 +105,19 @@
     width: 100%;
     background-color: var(--bg-princi);
 
-
-    .fix-end{
+    .fix-end {
       width: 50%;
       display: flex;
       justify-content: flex-end;
 
-
-      
-      .etapas{
+      .etapas {
         height: fit-content;
         width: 13rem;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
 
-        .circle-1{
+        .circle-1 {
           height: 40px;
           width: 40px;
           display: flex;
@@ -140,10 +128,9 @@
           color: var(--bg-princi);
           font-family: var(--fourth-font);
           font-size: 14px;
-
         }
-        
-        .circle-2{
+
+        .circle-2 {
           height: 40px;
           width: 40px;
           display: flex;
@@ -153,11 +140,9 @@
           background-color: var(--gray);
           font-family: var(--fourth-font);
           font-size: 14px;
-
         }
-        
-        .circle-3{
 
+        .circle-3 {
           height: 40px;
           width: 40px;
           display: flex;
@@ -167,25 +152,17 @@
           background-color: var(--gray);
           font-family: var(--fourth-font);
           font-size: 14px;
-
-          
         }
-
-
       }
-
     }
-    
-    
-    .proxima{
+
+    .proxima {
       height: max-content;
       width: calc(30% - 0px);
       display: flex;
       justify-content: flex-end;
-     
 
-
-      .proxima-etapa{
+      .proxima-etapa {
         height: 50px;
         width: 200px;
         display: flex;
@@ -196,21 +173,19 @@
         cursor: pointer;
         font-family: var(--second-font);
         font-size: 24px;
-  
+      }
+      .proxima-etapa:hover {
+        transform: scale(1.1);
       }
     }
-
-
   }
-
 }
-.container-2{
-
+.container-2 {
   nav {
     height: 100px;
     width: 100%;
     background-color: var(--bg-princi);
-  
+
     .back {
       border: none;
       background-color: var(--bg-princi);
@@ -219,10 +194,13 @@
       font-size: var(--third-font-size);
       cursor: pointer;
     }
+
+    .back:hover {
+      transform: scale(1.1);
+    }
   }
 
-  .cadastro-principal-2{
-
+  .cadastro-principal-2 {
     height: max-content;
     width: 100%;
     display: flex;
@@ -230,46 +208,43 @@
     align-items: center;
     background-color: var(--bg-princi);
 
+    .cadastro-estabelecimento {
+      height: max-content;
+      width: calc(60% - 40px);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
 
-    .cadastro-estabelecimento{
-
-    height: max-content;
-    width: calc(60% - 40px);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-
-    .input {
+      .input {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 10px;
         gap: 10px;
         font-family: var(--fourth-font);
-        
-        
-  
+
         label {
           padding-left: 10px;
         }
-  
+
         .form-control {
           padding: 10px;
           padding-right: 100px;
           width: 100%;
           border-radius: 4px;
           border-color: lightgray;
-          box-shadow: 0 4px 4px 0 #0000003b
-  
+          box-shadow: 0 4px 4px 0 #0000003b;
+        }
+        .form-control:hover {
+          transform: scale(1.1);
+          cursor: pointer;
         }
       }
     }
 
-
-    .adicionarfoto{
+    .adicionarfoto {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -278,30 +253,31 @@
       height: 230px;
       width: 500px;
 
-      .buttonadicionarfoto{
+      .buttonadicionarfoto {
         border: none;
         background-color: var(--bg-princi);
         cursor: pointer;
       }
-    
-
+      .buttonadicionarfoto:hover {
+        transform: scale(1.1);
+      }
     }
 
-    .texto-imagem-2{
+    .texto-imagem-2 {
       display: flex;
       flex-direction: column;
       align-items: center;
       height: max-content;
       width: 100%;
 
-      .definaEstabelecimento{
+      .definaEstabelecimento {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: max-content;
         width: 20%;
-  
-        .text-estabelecimento{
+
+        .text-estabelecimento {
           height: 156px;
           width: 313px;
           display: flex;
@@ -309,60 +285,53 @@
           align-items: center;
           font-size: var(--second-font-size);
           font-family: var(--second-font);
-          
-          .text-estabelecimento2{
+
+          .text-estabelecimento2 {
             font-size: var(--second-font-size);
             font-family: var(--second-font);
           }
-       
-    }
-
-
+        }
       }
-
     }
+  }
 
-    }
-    
-
-  .container2-end{
+  .container2-end {
     height: 120px;
     display: flex;
     justify-content: space-evenly;
-    align-items: last baseline ;
+    align-items: last baseline;
     width: 100%;
     background-color: var(--bg-princi);
 
-    .voltar{
+    .voltar {
       height: max-content;
       width: max-content;
 
-      .btn-voltar{
+      .btn-voltar {
         border: none;
         background-color: var(--bg-princi);
         font-family: var(--second-font);
         font-size: var(--third-font-size);
         cursor: pointer;
-
+      }
+      .btn-voltar:hover {
+        transform: scale(1.1);
       }
     }
 
-
-    .fix-end{
-      width: 50%;
+    .fix-end {
+      width: 35%;
       display: flex;
       justify-content: flex-end;
 
-
-      
-      .etapas{
+      .etapas {
         height: fit-content;
         width: 13rem;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
 
-        .circle-1{
+        .circle-1 {
           height: 40px;
           width: 40px;
           display: flex;
@@ -373,10 +342,9 @@
           color: var(--bg-princi);
           font-family: var(--fourth-font);
           font-size: 14px;
-
         }
-        
-        .circle-2{
+
+        .circle-2 {
           height: 40px;
           width: 40px;
           display: flex;
@@ -387,11 +355,9 @@
           background-color: var(--green);
           font-family: var(--fourth-font);
           font-size: 14px;
-
         }
-        
-        .circle-3{
 
+        .circle-3 {
           height: 40px;
           width: 40px;
           display: flex;
@@ -401,25 +367,17 @@
           background-color: var(--gray);
           font-family: var(--fourth-font);
           font-size: 14px;
-
-          
         }
-
-
       }
-
     }
-    
 
-    .proxima{
+    .proxima {
       height: max-content;
       width: calc(30% - 0px);
       display: flex;
       justify-content: flex-end;
-     
 
-
-      .proxima-etapa{
+      .proxima-etapa {
         height: 50px;
         width: 200px;
         display: flex;
@@ -430,22 +388,20 @@
         cursor: pointer;
         font-family: var(--second-font);
         font-size: 24px;
-  
+      }
+      .proxima-etapa:hover {
+        transform: scale(1.1);
       }
     }
-
-
   }
 }
 
-
-.container-3{
-
+.container-3 {
   nav {
     height: 100px;
     width: 100%;
     background-color: var(--bg-princi);
-  
+
     .back {
       border: none;
       background-color: var(--bg-princi);
@@ -454,10 +410,12 @@
       font-size: var(--third-font-size);
       cursor: pointer;
     }
+    .back:hover {
+      transform: scale(1.1);
+    }
   }
 
-  .cadastro-principal-3{
-
+  .cadastro-principal-3 {
     height: max-content;
     width: 100%;
     display: flex;
@@ -465,46 +423,43 @@
     align-items: center;
     background-color: var(--bg-princi);
 
+    .cadastro-funcionamento {
+      height: max-content;
+      width: calc(20% - 10px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--fourth-font);
 
-    .cadastro-funcionamento{
-
-    height: max-content;
-    width: calc(20% - 10px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    font-family: var(--fourth-font);
-
-
-    .input {
+      .input {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding-bottom: 20px;
         gap: 10px;
-        
-        
-        
-  
+
         label {
           padding-left: 10px;
         }
-  
+
         .form-control {
           padding: 10px;
           width: 260px;
           border-radius: 4px;
           background-color: white;
           border-color: lightgray;
-          box-shadow: 1px 4px 4px 1px #0000003b
-  
+          box-shadow: 1px 4px 4px 1px #0000003b;
+        }
+        .form-control:hover {
+          transform: scale(1.1);
+          cursor: pointer;
         }
       }
 
       //////////////////////////////////////
 
-      .horariosfun{
+      .horariosfun {
         height: 280px;
         display: flex;
         flex-direction: column;
@@ -514,7 +469,7 @@
         border: solid 1px var(--black);
         border-radius: 8px;
 
-        .Turno{
+        .Turno {
           height: 150px;
           padding: 5px;
           width: 200px;
@@ -529,8 +484,8 @@
             justify-content: space-between;
             padding: 5px;
             font-family: var(--fourth-font);
-            
-            .start{
+
+            .start {
               height: 50px;
               width: max-content;
               display: flex;
@@ -538,7 +493,7 @@
               justify-content: space-between;
               align-items: center;
             }
-            .end{
+            .end {
               height: 50px;
               width: max-content;
               display: flex;
@@ -546,7 +501,7 @@
               justify-content: space-between;
               align-items: center;
             }
-      
+
             .form-control {
               display: flex;
               justify-content: space-between;
@@ -554,13 +509,14 @@
               width: 60%;
               border-radius: 4px;
               border-color: lightgray;
-              box-shadow: 1px 4px 4px 1px #0000003b
-            
-      
+              box-shadow: 1px 4px 4px 1px #0000003b;
+            }
+            .form-control:hover {
+              transform: scale(1.1);
             }
           }
 
-          .days{
+          .days {
             display: flex;
             flex-direction: column;
             height: max-content;
@@ -568,168 +524,137 @@
             align-items: center;
             width: 100%;
             font-family: var(--fourth-font);
-         
 
             .form-control {
-              
               width: 70%;
               padding: 2px;
               border-radius: 4px;
               border-color: lightgray;
-              box-shadow: 1px 4px 4px 1px #0000003b
-      
+              box-shadow: 1px 4px 4px 1px #0000003b;
             }
-            
+            .form-control:hover {
+              transform: scale(1.1);
+            }
           }
-
-
         }
-        
-        .addturno{
+
+        .addturno {
           height: max-content;
           width: max-content;
 
-          .btn-add{
+          .btn-add {
             border: none;
             background-color: var(--bg-princi);
             cursor: pointer;
 
-            img{
+            img {
               height: 45px;
               width: 45px;
-              
+            }
+            img:hover {
+              transform: scale(1.1);
             }
           }
         }
-
       }
-
     }
 
-
-    .exemploturno{
+    .exemploturno {
       height: 180px;
       width: 205px;
       display: flex;
       flex-direction: column;
       align-items: center;
       font-family: var(--fourth-font);
-  
 
-      .exemplos{
+      .exemplos {
         height: 160px;
         width: 200px;
         border: solid 1px black;
         border-radius: 8px;
         padding: 2px;
-      
-      
 
-        .demonstrativo{
+        .demonstrativo {
           height: 50px;
           width: 100%;
-          display: flex ;
-          justify-content: space-between;
-          align-items: center;
-
-          
-
-        .inicioex{
-          height: 50px;
           display: flex;
-          flex-direction: column;
           justify-content: space-between;
           align-items: center;
-        
 
-          .form-control {
-              
-            width: 70%;
-            padding: 2px;
-            border-radius: 4px;
-            border-color: lightgray;
-            box-shadow: 1px 4px 4px 1px #0000003b;
-            cursor: default;
-    
+          .inicioex {
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            .form-control {
+              width: 70%;
+              padding: 2px;
+              border-radius: 4px;
+              border-color: lightgray;
+              box-shadow: 1px 4px 4px 1px #0000003b;
+              cursor: default;
+            }
           }
-      
+
+          .terminoex {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+
+            .form-control {
+              width: 70%;
+              padding: 2px;
+              border-radius: 4px;
+              border-color: lightgray;
+              box-shadow: 1px 4px 4px 1px #0000003b;
+              cursor: default;
+            }
+          }
+        }
+        .demonstrativo-end {
+          height: max-content;
+          width: 100%;
+
+          .diaex {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 8px;
+
+            .form-control {
+              width: 70%;
+              padding: 2px;
+              border-radius: 4px;
+              border-color: lightgray;
+              box-shadow: 1px 4px 4px 1px #0000003b;
+              cursor: default;
+            }
+          }
+        }
       }
-
-
-      .terminoex{
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        height: 50px; 
-        
-        .form-control {
-              
-          width: 70%;
-          padding: 2px;
-          border-radius: 4px;
-          border-color: lightgray;
-          box-shadow: 1px 4px 4px 1px #0000003b;
-          cursor: default;
-  
-      }
-        
-      }
-
-
-    
-
-    }
-.demonstrativo-end{
-  height: max-content;
-  width: 100%;
-
-  .diaex{
-    height: 50px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 8px;
-
-
-    .form-control {
-              
-      width: 70%;
-      padding: 2px;
-      border-radius: 4px;
-      border-color: lightgray;
-      box-shadow: 1px 4px 4px 1px #0000003b;
-      cursor: default;
-
-  }
-  }
-}
-    
-    }
-    
-       
     }
 
-
-
-
-    .texto-imagem-3{
+    .texto-imagem-3 {
       display: flex;
       flex-direction: column;
       align-items: center;
       height: max-content;
       width: 30%;
 
-      .text-horario{
+      .text-horario {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: max-content;
         width: 20%;
-  
-        .text-qualoseuhorario{
+
+        .text-qualoseuhorario {
           height: 156px;
           width: 330px;
           display: flex;
@@ -737,55 +662,53 @@
           align-items: center;
           font-size: var(--second-font-size);
           font-family: var(--second-font);
-          
-          .text-qualoseuhorario2{
+
+          .text-qualoseuhorario2 {
             font-size: var(--second-font-size);
             font-family: var(--second-font);
           }
         }
       }
-      }
-
     }
+  }
 
-  .container3-end{
+  .container3-end {
     height: 120px;
     display: flex;
     justify-content: space-evenly;
-    align-items: last baseline ;
+    align-items: last baseline;
     width: 100%;
     background-color: var(--bg-princi);
 
-    .voltar{
+    .voltar {
       height: max-content;
       width: max-content;
 
-      .btn-voltar{
+      .btn-voltar {
         border: none;
         background-color: var(--bg-princi);
         font-family: var(--second-font);
         font-size: var(--third-font-size);
         cursor: pointer;
-
+      }
+      .btn-voltar:hover {
+        transform: scale(1.1);
       }
     }
 
-
-    .fix-end{
-      width: 50%;
+    .fix-end {
+      width: 35%;
       display: flex;
       justify-content: flex-end;
 
-
-      
-      .etapas{
+      .etapas {
         height: fit-content;
         width: 13rem;
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: flex-start;
 
-        .circle-1{
+        .circle-1 {
           height: 40px;
           width: 40px;
           display: flex;
@@ -796,10 +719,9 @@
           color: var(--bg-princi);
           font-family: var(--fourth-font);
           font-size: 14px;
-
         }
-        
-        .circle-2{
+
+        .circle-2 {
           height: 40px;
           width: 40px;
           display: flex;
@@ -810,11 +732,9 @@
           background-color: var(--green);
           font-family: var(--fourth-font);
           font-size: 14px;
-
         }
-        
-        .circle-3{
 
+        .circle-3 {
           height: 40px;
           width: 40px;
           display: flex;
@@ -825,25 +745,17 @@
           background-color: var(--green);
           font-family: var(--fourth-font);
           font-size: 14px;
-
-          
         }
-
-
       }
-
     }
-    
 
-    .proxima{
+    .proxima {
       height: max-content;
       width: calc(30% - 0px);
       display: flex;
       justify-content: flex-end;
-     
 
-
-      .proxima-etapa{
+      .proxima-etapa {
         height: 50px;
         width: 200px;
         display: flex;
@@ -854,130 +766,10 @@
         cursor: pointer;
         font-family: var(--second-font);
         font-size: 24px;
-  
+      }
+      .proxima-etapa:hover {
+        transform: scale(1.1);
       }
     }
-
-
   }
-
-
-.container3-end{
-    height: 120px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: last baseline ;
-    width: 100%;
-    background-color: var(--bg-princi);
-
-    .voltar{
-      height: max-content;
-      width: max-content;
-
-      .btn-voltar{
-        border: none;
-        background-color: var(--bg-princi);
-        font-family: var(--second-font);
-        font-size: var(--third-font-size);
-        cursor: pointer;
-
-      }
-    }
-
-
-    .fix-end{
-      width: 50%;
-      display: flex;
-      justify-content: flex-end;
-
-
-      
-      .etapas{
-        height: fit-content;
-        width: 13rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-
-        .circle-1{
-          height: 40px;
-          width: 40px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50%;
-          background-color: var(--green);
-          color: var(--bg-princi);
-          font-family: var(--fourth-font);
-          font-size: 14px;
-
-        }
-        
-        .circle-2{
-          height: 40px;
-          width: 40px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50%;
-          color: var(--bg-princi);
-          background-color: var(--green);
-          font-family: var(--fourth-font);
-          font-size: 14px;
-
-        }
-        
-        .circle-3{
-
-          height: 40px;
-          width: 40px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50%;
-          color: var(--bg-princi);
-          background-color: var(--green);
-          font-family: var(--fourth-font);
-          font-size: 14px;
-
-          
-        }
-
-
-      }
-
-    }
-    
-
-    .proxima{
-      height: max-content;
-      width: calc(30% - 0px);
-      display: flex;
-      justify-content: flex-end;
-     
-
-
-      .proxima-etapa{
-        height: 50px;
-        width: 200px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        border: solid 1px var(--green);
-        border-radius: 8px;
-        cursor: pointer;
-        font-family: var(--second-font);
-        font-size: 24px;
-  
-      }
-    }
-
-
-  }
-
-
-      }
-
- 
-
-  
+}
