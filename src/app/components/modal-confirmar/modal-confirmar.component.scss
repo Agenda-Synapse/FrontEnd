@@ -1,8 +1,64 @@
-.modal-body {
+.modal-header {
+  display: flex;
   padding: 20px;
+  flex-direction: column;
+  background-color: #363636;
+  color: #f7f7f7;
+
+  .botao {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    .close {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      background-color: #363636;
+      color: #f7f7f7;
+    }
+  }
+}
+
+.modal-body {
+  padding: 25px;
   display: flex;
   flex-direction: column;
   input {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
+}
+
+.bloco1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+
+  .parte1 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #363636;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    height: 28px;
+  }
+
+  .parte2 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #363636;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    height: 28px;
+  }
+}
+
+.bloco2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #28c28b;
+  color: #f7f7f7;
 }
