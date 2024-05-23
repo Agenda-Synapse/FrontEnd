@@ -33,6 +33,7 @@ const routes: Routes = [
       ),
   },
   { path: 'loginprop', loadChildren: () => import('./pages/loginprop/loginprop.module').then(m => m.LoginpropModule) },
+  { path: 'cadastroprop', loadChildren: () => import('./pages/cadastroprop/cadastroprop.module').then(m => m.CadastropropModule) },
 ];
 
 @NgModule({
