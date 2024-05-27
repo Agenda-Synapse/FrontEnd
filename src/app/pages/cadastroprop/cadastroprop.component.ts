@@ -5,25 +5,12 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-cadastroprop',
   templateUrl: './cadastroprop.component.html',
-  styleUrls: ['./cadastroprop.component.scss']
+  styleUrls: ['./cadastroprop.component.scss'],
 })
-export class CadastropropComponent  {
-
-  
-
+export class CadastropropComponent {
   currentContainer: number = 1;
 
-  nome: string = '';
-  email: string = '';
-  senha: string = '';
-  confirmarSenha: string = '';
-  nomeEstabelecimento: string = '';
-  endereco: string = '';
-  documento: string = '';
-  area: string = '';
-  inicio: string = '';
-  termino: string = '';
-  dias: string = ''
+ 
 
   next() {
     if (this.currentContainer < 3) {
@@ -37,5 +24,3 @@ export class CadastropropComponent  {
     }
   }
 }
-
-
