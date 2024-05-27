@@ -1,5 +1,5 @@
 <!-- #criar um container para parte da página, inserir as divs filhos em cada container -->
-<div class="container-1">
+<div  class="container-1" *ngIf="currentContainer === 1">
   <nav>
     <button class="back">Sair</button>
   </nav>
@@ -8,19 +8,19 @@
       <form>
         <div class="input">
           <label for="nome">Nome Proprietário</label>
-          <input type="text" class="form-control" placeholder="" />
+          <input type="text" class="form-control" placeholder="" [(ngModel)]="nome" name="nome"  />
         </div>
         <div class="input">
           <label for="email">Email</label>
-          <input type="email" class="form-control" placeholder="" />
+          <input type="email" class="form-control" placeholder="" [(ngModel)]="email" name="email" />
         </div>
         <div class="input">
           <label for="senha">Senha</label>
-          <input type="senha" class="form-control" placeholder="" />
+          <input type="password" class="form-control" placeholder="" [(ngModel)]="senha" name="senha"  />
         </div>
         <div class="input">
           <label for="confirmarsenha">Confirmar Senha</label>
-          <input type="confirmarsenha" class="form-control" placeholder="" />
+          <input type="password" class="form-control" placeholder="" [(ngModel)]="confirmarSenha" name="confirmarSenha" />
         </div>
       </form>
     </div>
@@ -53,7 +53,7 @@
     </div>
 
     <div class="proxima">
-      <button class="proxima-etapa">
+      <button class="proxima-etapa" (click)="next()">
         <p class="continuar">Continuar</p>
         <img class="seta" src="../../../assets/carbon_next-filled.svg" alt="" />
       </button>
@@ -61,7 +61,7 @@
   </div>
 </div>
 
-<div class="container-2">
+<div class="container-2" *ngIf="currentContainer === 2">
   <nav>
     <button class="back">Sair</button>
   </nav>
@@ -111,7 +111,7 @@
   </div>
 
   <div class="container2-end">
-    <div class="voltar">
+    <div class="voltar" (click)="back()">
       <button class="btn-voltar">Voltar</button>
     </div>
 
@@ -136,7 +136,7 @@
   </div>
 </div>
 
-<div class="container-3">
+<div  class="container-3" *ngIf="currentContainer === 3">
   <nav>
     <button class="back">Sair</button>
   </nav>
