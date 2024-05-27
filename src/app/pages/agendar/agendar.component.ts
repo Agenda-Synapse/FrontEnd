@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalConfirmarComponent } from 'src/app/components/modal-confirmar/modal-confirmar.component';
 
 @Component({
@@ -8,7 +7,6 @@ import { ModalConfirmarComponent } from 'src/app/components/modal-confirmar/moda
   styleUrls: ['./agendar.component.scss']
 })
 export class AgendarComponent {
-  constructor( public modalService: NgbModal){}
 
   data: String = "11/09/2001";
   hour: String = "00:00";
@@ -16,7 +14,7 @@ export class AgendarComponent {
 
 
   openModal() {
-    const modalRef = this.modalService.open(ModalConfirmarComponent);
+    
   }
 
 }

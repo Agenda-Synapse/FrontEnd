@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-modal-confirmar',
@@ -7,10 +6,6 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./modal-confirmar.component.scss']
 })
 export class ModalConfirmarComponent {
-  constructor( public activeModal: NgbActiveModal){}
-
-  passBack() {
-    this.activeModal.close();
-  }
+ 
 
 }
