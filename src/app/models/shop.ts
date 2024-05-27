@@ -4,5 +4,5 @@ export interface Loja {
     endereco: string;
     status: string;
     tipo: string;
-  }
+}
   

@@ -1,7 +1,7 @@
 <!-- #criar um container para parte da página, inserir as divs filhos em cada container -->
 <div  class="container-1" *ngIf="currentContainer === 1">
   <nav>
-    <button class="back">Sair</button>
+    <button class="back" routerLink="">Sair</button>
   </nav>
   <div class="cadastro-principal">
     <div class="cadastro-pessoa">
@@ -63,7 +63,7 @@
 
 <div class="container-2" *ngIf="currentContainer === 2">
   <nav>
-    <button class="back">Sair</button>
+    <button class="back" routerLink="">Sair</button>
   </nav>
   <div class="cadastro-principal-2">
     <div class="cadastro-estabelecimento">
@@ -111,8 +111,8 @@
   </div>
 
   <div class="container2-end">
-    <div class="voltar" (click)="back()">
-      <button class="btn-voltar">Voltar</button>
+    <div class="voltar">
+      <button class="btn-voltar" (click)="back()">Voltar</button>
     </div>
 
     <div class="fix-end">
@@ -124,7 +124,7 @@
     </div>
 
     <div class="proxima">
-      <button class="proxima-etapa">
+      <button class="proxima-etapa" (click)="next()">
         <p class="continuar">Continuar</p>
         <img
           class="seta"
@@ -138,7 +138,7 @@
 
 <div  class="container-3" *ngIf="currentContainer === 3">
   <nav>
-    <button class="back">Sair</button>
+    <button class="back" routerLink="">Sair</button>
   </nav>
   <div class="cadastro-principal-3">
     <div class="cadastro-funcionamento">
@@ -250,7 +250,7 @@
   </div>
   <div class="container3-end">
     <div class="voltar">
-      <button class="btn-voltar">Voltar</button>
+      <button class="btn-voltar" (click)="back()">Voltar</button>
     </div>
 
     <div class="fix-end">
@@ -262,7 +262,7 @@
     </div>
 
     <div class="proxima">
-      <button class="proxima-etapa">
+      <button class="proxima-etapa" routerLink="">
         <p class="continuar">Continuar</p>
         <img class="seta" src="../../../assets/carbon_next-filled.svg" alt="" />
       </button>

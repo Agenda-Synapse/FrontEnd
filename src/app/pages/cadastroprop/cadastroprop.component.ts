@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastroprop',
   templateUrl: './cadastroprop.component.html',
   styleUrls: ['./cadastroprop.component.scss']
 })
-export class CadastropropComponent {
+export class CadastropropComponent  {
+
+  
 
   currentContainer: number = 1;
 

@@ -12,10 +12,7 @@ import { ModalConfirmarComponent } from './components/modal-confirmar/modal-conf
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    AppRoutingModule,
-    NgModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
