@@ -3,7 +3,7 @@
     <button class="back-btn" routerLink="/home">Voltar</button>
   </div>
   <div class="center-top">
-    <h1>Barbearia do JV</h1>
+    <h1 class="nome-shop">Barbearia do JV</h1>
     <p>Corte degrade</p>
   </div>
   <div class="perfil-img">
@@ -17,17 +17,34 @@
       <form class="changes">
         <div class="fields">
           <label>DATA</label>
-          <input type="date" />
+          <input type="date" [(ngModel)] = "data"
+          data="00:00" name="data"/>
         </div>
         <div class="fields">
           <label>HORÁRIO</label>
-          <input type="time" />
+          <input type="time" [(ngModel)] = "hour" name="hour"/>
         </div>
       </form>
     </div>
   </div>
   <div class="right">
     <div class="your"><p class="title">Seu agendamento</p></div>
-    <div class="visu"></div>
+    <div class="visu">
+      <div class="proc">
+        <p class="procedimento">Procedimento</p>
+        <p class="proc-nome">Corte APInome</p>
+      </div>
+      <div class="proc">
+        <p class="procedimento">Horário</p>
+        <p class="proc-nome">{{hour}}</p>
+      </div>
+      <div class="proc">
+        <p class="procedimento">Dia</p>
+        <p class="proc-nome">{{data}}</p>
+      </div>
+    </div>
   </div>
+</div>
+<div class="foot">
+  <button class="continue" (click)="openModal()">Continuar</button>
 </div>

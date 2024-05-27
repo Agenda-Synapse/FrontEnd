@@ -57,6 +57,15 @@
     align-items: center;
     justify-content: space-between;
     width: 9%;
+    transition: 0.3s ease;
+
+    .calendario:hover{
+      cursor: pointer;
+    }
+
+    .calendario:active{
+      transform: scale(1.05);
+    }
   }
 }
 
@@ -83,9 +92,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
+    width: 55%;
     height: 30%;
-    margin-top: 4%;
+    margin-top: 3%;
 
     .cat-img {
       height: 100%;

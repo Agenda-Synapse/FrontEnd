@@ -13,7 +13,7 @@
     border: none;
     color: var(--bg-princi);
     font-family: var(--third-font);
-    font-size: 20px;
+    font-size: 1rem;
     background-color: var(--green);
     cursor: pointer;
   }
@@ -49,13 +49,22 @@
       width: 30px;
       background-color: black;
       border: none;
-      cursor: pointer;
+      transition: 0.3s ease;
 
       img {
         height: 30px;
         width: 30px;
       }
     }
+
+    .botaohome:hover{
+      cursor: pointer;
+    }
+
+    .botaohome:active{
+      transform: scale(1.05);
+    }
+
 
     .botaoagenda {
       height: 30px;
@@ -104,7 +113,8 @@ h1 {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        font-family: var(--fourth-font);
+        font-family: var(--fourth-font) ;
+        
       }
       .data {
         height: 100px;

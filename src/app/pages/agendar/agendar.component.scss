@@ -26,13 +26,19 @@
     justify-content: space-between;
     height: 60%;
 
-    h1 {
+      .nome-shop {
       text-align: center;
+      color: #ffffff;
+      font-family: var(--second-font);
+      font-size: 40px;
+      font-weight: 400;
     }
 
     p {
       font-family: var(--principal-font);
       font-size: var(--principal-font-size);
+      color: #ffffff;
+      font-weight: 300;
     }
   }
 
@@ -58,7 +64,7 @@
   align-items: center;
   height: 60vh;
   width: 100vw;
-  margin-top: 2%;
+  background-color: var(--bg-princi);
 
   .dtHr {
     display: flex;
@@ -70,11 +76,13 @@
     h3 {
       font-family: var(--principal-font);
       width: max-content;
+      margin-bottom: 1rem;
+      padding-left: .5rem;
     }
 
     .inserts {
       display: flex;
-      background-color: var(--black);
+      background-color: #ffffff;
       width: max-content;
       padding: 1rem;
       border-radius: 1rem;
@@ -82,18 +90,19 @@
       .changes {
         display: flex;
         flex-direction: column;
+        width: 40vw;
 
         .fields {
           display: flex;
           flex-direction: column;
 
           label {
+            font-family: var(--second-font);
             margin-bottom: 0.5rem;
           }
 
           input {
             height: 2rem;
-            width: 18rem;
             border-radius: 0.25rem;
             margin-bottom: 1rem;
             border: none;
@@ -128,11 +137,66 @@
 
     .visu {
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       height: 75%;
-      width: calc(100% - 2px);
+      width: 100%;
+      background-color: #ffffff;
       border-right: solid 1px #000000;
       border-bottom: solid 1px #000000;
       border-left: solid 1px #000000;
+
+      .proc{
+        display: flex;
+        width: 90%;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 1rem 0 1rem 0;
+        border-bottom: solid 1px var(--black);
+
+        .procedimento{
+          font-family: var(--fourth-font);
+          margin-bottom: .25rem;
+          color: var(--gray);
+        }
+
+        .proc-nome{
+          font-family: var(--second-font);
+          margin-bottom: .25rem;
+          color: var(--black);
+          font-weight: 500;
+          font-size: 3vh;
+        }
+      }
+    }
+  }
+}
+
+.foot{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 23vh;
+  width: 100vw;
+  background-color: var(--bg-princi);
+
+  .continue{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+    font-family: var(--second-font);
+    color: var(--black);
+    font-weight: 600;
+    font-size: 3.25vh;
+    margin: 0 1rem 1rem 0;
+    border: none;
+    background-color: transparent;
+
+    &:hover{
+      cursor: pointer;
     }
   }
 }
