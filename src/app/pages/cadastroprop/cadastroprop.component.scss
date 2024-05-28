@@ -31,7 +31,6 @@
     .cadastro-pessoa {
       height: max-content;
       width: calc(60% - 40px);
-      padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -59,7 +58,6 @@
         }
 
         .form-control:hover {
-          transform: scale(1.1);
           cursor: pointer;
         }
       }
@@ -231,7 +229,6 @@
 
         .form-control {
           padding: 10px;
-          padding-right: 100px;
           width: 100%;
           border-radius: 4px;
           border-color: lightgray;
@@ -246,12 +243,14 @@
 
     .adicionarfoto {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       border: solid 1px var(--black);
       border-radius: 20px;
       height: 230px;
       width: 500px;
+      font-family: var(--fourth-font);
 
       .buttonadicionarfoto {
         border: none;
@@ -772,4 +771,5 @@
       }
     }
   }
+
 }
