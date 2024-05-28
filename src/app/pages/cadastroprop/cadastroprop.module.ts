@@ -5,6 +5,7 @@ import { CadastropropRoutingModule } from './cadastroprop-routing.module';
 import { CadastropropComponent, } from './cadastroprop.component';
 
 
+
 @NgModule({
   declarations: [
     CadastropropComponent
@@ -14,6 +15,7 @@ import { CadastropropComponent, } from './cadastroprop.component';
     CadastropropRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+ 
   ]
 })
 export class CadastropropModule { }

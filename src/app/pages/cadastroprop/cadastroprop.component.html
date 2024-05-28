@@ -1,26 +1,71 @@
-<!-- #criar um container para parte da página, inserir as divs filhos em cada container -->
-<div  class="container-1" *ngIf="currentContainer === 1">
+<div class="container-1" *ngIf="currentContainer === 1">
   <nav>
     <button class="back" routerLink="">Sair</button>
   </nav>
   <div class="cadastro-principal">
     <div class="cadastro-pessoa">
-      <form>
+      <form [formGroup]="step1Form">
         <div class="input">
           <label for="nome">Nome Proprietário</label>
-          <input type="text" class="form-control" placeholder=""  />
+          <input type="text" class="form-control" formControlName="nome" />
+          <div
+            *ngIf="
+              step1Form.get('nome')!.invalid && step1Form.get('nome')!.touched
+            "
+            class="error"
+          >
+            Nome é obrigatório
+          </div>
         </div>
         <div class="input">
           <label for="email">Email</label>
-          <input type="email" class="form-control" placeholder=""  />
+          <input type="email" class="form-control" formControlName="email" />
+          <div
+            *ngIf="
+              step1Form.get('email')!.invalid && step1Form.get('email')!.touched
+            "
+            class="error"
+          >
+            Email é obrigatório e deve ser válido
+          </div>
         </div>
         <div class="input">
           <label for="senha">Senha</label>
-          <input type="password" class="form-control" placeholder=""   />
+          <input type="password" class="form-control" formControlName="senha" />
+          <div
+            *ngIf="
+              step1Form.get('senha')!.invalid && step1Form.get('senha')!.touched
+            "
+            class="error"
+          >
+            Senha é obrigatória
+          </div>
         </div>
         <div class="input">
           <label for="confirmarsenha">Confirmar Senha</label>
-          <input type="password" class="form-control" placeholder="" />
+          <input
+            type="password"
+            class="form-control"
+            formControlName="confirmarSenha"
+          />
+          <div
+            *ngIf="
+              step1Form.get('confirmarSenha')!.invalid &&
+              step1Form.get('confirmarSenha')!.touched
+            "
+            class="error"
+          >
+            Confirmação de senha é obrigatória
+          </div>
+          <div
+            *ngIf="
+              step1Form.errors?.['passwordMismatch'] &&
+              step1Form.get('confirmarSenha')!.touched
+            "
+            class="error"
+          >
+            As senhas não coincidem
+          </div>
         </div>
       </form>
     </div>
@@ -61,35 +106,75 @@
   </div>
 </div>
 
+
 <div class="container-2" *ngIf="currentContainer === 2">
   <nav>
     <button class="back" routerLink="">Sair</button>
   </nav>
   <div class="cadastro-principal-2">
     <div class="cadastro-estabelecimento">
-      <form>
+      <form [formGroup]="step2Form">
         <div class="input">
           <label for="nomeestabelecimento">Nome do estabelecimento</label>
-          <input type="text" class="form-control" placeholder="" />
+          <input
+            type="text"
+            class="form-control"
+            formControlName="nomeEstabelecimento"
+          />
+          <div
+            *ngIf="
+              step2Form.get('nomeEstabelecimento')!.invalid &&
+              step2Form.get('nomeEstabelecimento')!.touched
+            "
+            class="error"
+          >
+            Nome do estabelecimento é obrigatório
+          </div>
         </div>
         <div class="input">
           <label for="endereço">Endereço</label>
-          <input type="text" class="form-control" placeholder="" />
+          <input type="text" class="form-control" formControlName="endereco" />
+          <div
+            *ngIf="
+              step2Form.get('endereco')!.invalid &&
+              step2Form.get('endereco')!.touched
+            "
+            class="error"
+          >
+            Endereço é obrigatório
+          </div>
         </div>
         <div class="input">
           <label for="documentos">CNPJ ou CPF</label>
-          <input type="text" class="form-control" placeholder="" />
+          <input
+            type="text"
+            class="form-control"
+            formControlName="documentos"
+          />
+          <div
+            *ngIf="
+              step2Form.get('documentos')!.invalid &&
+              step2Form.get('documentos')!.touched
+            "
+            class="error"
+          >
+            CNPJ ou CPF é obrigatório
+          </div>
         </div>
       </form>
     </div>
     <div class="adicionarfoto">
-      <button class="buttonadicionarfoto">
+      <input type="file" id="fileInput" (change)="onFileSelected($event)" style="display: none;" />
+      <button type="button" class="buttonadicionarfoto" (click)="triggerFileInputClick()">
         <img
           class="adicionar"
           src="../../../assets/addbutton.svg"
           alt="botaoadicionar"
         />
       </button>
+      <div *ngIf="!isImageSelected && isFormTouched" class="error">
+        Selecione uma imagem.
+      </div>
     </div>
 
     <div class="texto-imagem-2">
@@ -136,31 +221,30 @@
   </div>
 </div>
 
-<div  class="container-3" *ngIf="currentContainer === 3">
+<div class="container-3" *ngIf="currentContainer === 3">
   <nav>
     <button class="back" routerLink="">Sair</button>
   </nav>
   <div class="cadastro-principal-3">
     <div class="cadastro-funcionamento">
-      <form>
+      <form [formGroup]="step3Form">
         <div class="input">
-          <label for="horaatuacao">Área de atuação</label>
+          <label for="areaAtuacao">Área de atuação</label>
           <input
-            list="areas"
             type="text"
             class="form-control"
-            maxlength="15"
-            placeholder=""
+            formControlName="areaAtuacao"
           />
-
-          <datalist id="areas">
-            <option value="Unhas"></option>
-            <option value="Barbearia"></option>
-            <option value="Maquiagem"></option>
-            <option value="Salão de Beleza"></option>
-          </datalist>
+          <div
+            *ngIf="
+              step3Form.get('areaAtuacao')!.invalid &&
+              step3Form.get('areaAtuacao')!.touched
+            "
+            class="error"
+          >
+            Área de atuação é obrigatória
+          </div>
         </div>
-
         <div class="horariosfun">
           <p>Funcionamento</p>
           <div class="Turno">
@@ -168,17 +252,56 @@
 
             <div class="inputs">
               <div class="start">
-                <label for="inicio">Inicio</label>
-                <input type="text" class="form-control" placeholder="" />
+                <label for="inicioTurno1">Inicio</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="inicioTurno1"
+                />
+                <div
+                  *ngIf="
+                    step3Form.get('inicioTurno1')!.invalid &&
+                    step3Form.get('inicioTurno1')!.touched
+                  "
+                  class="error"
+                >
+                  Início do turno 1 é obrigatório
+                </div>
               </div>
               <div class="end">
-                <label for="termino">Término </label>
-                <input type="text" class="form-control" placeholder="" />
+                <label for="terminoTurno1">Término</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="terminoTurno1"
+                />
+                <div
+                  *ngIf="
+                    step3Form.get('terminoTurno1')!.invalid &&
+                    step3Form.get('terminoTurno1')!.touched
+                  "
+                  class="error"
+                >
+                  Término do turno 1 é obrigatório
+                </div>
               </div>
             </div>
             <div class="days">
-              <label for="dias">Dias</label>
-              <input type="text" class="form-control" placeholder="" />
+              <label for="diasTurno1">Dias</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="diasTurno1"
+              />
+              <div
+                *ngIf="
+                  step3Form.get('diasTurno1')!.invalid &&
+                  step3Form.get('diasTurno1')!.touched
+                "
+                class="error"
+              >
+                Dias do turno 1 são obrigatórios
+              </div>
             </div>
           </div>
 
@@ -196,7 +319,6 @@
       <p>Exemplo</p>
       <div class="exemplos">
         <h4>Turno1</h4>
-
         <div class="demonstrativo">
           <div class="inicioex">
             <label for="inicio">Inicio</label>
