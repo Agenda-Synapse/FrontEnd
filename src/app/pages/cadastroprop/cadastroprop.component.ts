@@ -78,8 +78,11 @@ export class CadastropropComponent implements OnInit {
     this.showError = false;
     this.isFormTouched = true;
     if (this.currentContainer === 1 && this.isStep1Complete()) {
+      console.log("primeira parte do form", this.step1Form.value);
+      // debugger
       this.currentContainer = 2;
     } else if (this.currentContainer === 2 && this.isStep2Complete()) {
+      console.log("Segunda parte do form", this.step2Form.value);
       this.currentContainer = 3;
     } else if (this.currentContainer === 3 && this.isStep3Complete()) {
       // Avançar para a próxima etapa ou finalizar
