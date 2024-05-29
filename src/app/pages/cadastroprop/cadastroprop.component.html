@@ -5,7 +5,7 @@
   <div class="cadastro-principal">
     <div class="cadastro-pessoa">
       <form [formGroup]="step1Form">
-        <div class="input">
+        <div class="Box-forms">
           <label for="nome">Nome Proprietário</label>
           <input type="text" class="form-control" formControlName="nome" />
           <div
@@ -17,19 +17,20 @@
             Nome é obrigatório
           </div>
         </div>
-        <div class="input">
+        <div class="Box-forms">
           <label for="email">Email</label>
           <input type="email" class="form-control" formControlName="email" />
-          <div
-            *ngIf="
-              step1Form.get('email')!.invalid && step1Form.get('email')!.touched
-            "
-            class="error"
-          >
-            Email é obrigatório e deve ser válido
+          <div *ngIf="step1Form.get('email')?.invalid && step1Form.get('email')?.touched" class="error">
+            <div *ngIf="step1Form.get('email')?.errors?.['required']">
+              O campo de e-mail é obrigatório.
+            </div>
+            <div *ngIf="step1Form.get('email')?.errors?.['email']">
+              Por favor, insira um e-mail válido.
+            </div>
           </div>
         </div>
-        <div class="input">
+        
+        <div class="Box-forms">
           <label for="senha">Senha</label>
           <input type="password" class="form-control" formControlName="senha" />
           <div
@@ -41,7 +42,7 @@
             Senha é obrigatória
           </div>
         </div>
-        <div class="input">
+        <div class="Box-forms">
           <label for="confirmarsenha">Confirmar Senha</label>
           <input
             type="password"
@@ -73,8 +74,8 @@
     <div class="texto-imagem">
       <div class="montarPerfil">
         <h2 class="text-perfil">
-          Vamos montar
-          <h2 class="text-perfil2">seu perfil</h2>
+          Vamos   Montar
+          <h2 class="text-perfil2">Seu Perfil</h2>
         </h2>
 
         <div class="imagem-pessoa">
@@ -114,8 +115,8 @@
   <div class="cadastro-principal-2">
     <div class="cadastro-estabelecimento">
       <form [formGroup]="step2Form">
-        <div class="input">
-          <label for="nomeestabelecimento">Nome do estabelecimento</label>
+        <div class="Box-forms">
+          <label for="nomeestabelecimento">Nome do Estabelecimento</label>
           <input
             type="text"
             class="form-control"
@@ -131,7 +132,7 @@
             Nome do estabelecimento é obrigatório
           </div>
         </div>
-        <div class="input">
+        <div class="Box-forms">
           <label for="endereço">Endereço</label>
           <input type="text" class="form-control" formControlName="endereco" />
           <div
@@ -144,7 +145,7 @@
             Endereço é obrigatório
           </div>
         </div>
-        <div class="input">
+        <div class="Box-forms">
           <label for="documentos">CNPJ ou CPF</label>
           <input
             type="number"
@@ -172,16 +173,19 @@
           alt="botaoadicionar"
         />
       </button>
-      <div *ngIf="!isImageSelected && isFormTouched" class="error">
+      <p>Insira uma imagem do seu Estabelecimento<p>
+      <div *ngIf="showImageError" class="error">
         Selecione uma imagem.
       </div>
     </div>
+    
+    
 
     <div class="texto-imagem-2">
       <div class="definaEstabelecimento">
         <h2 class="text-estabelecimento">
           Defina seu
-          <h2 class="text-estabelecimento2">estabelecimento</h2>
+          <h2 class="text-estabelecimento2">Estabelecimento</h2>
         </h2>
 
         <div class="imagem-estabelecimento">
@@ -228,8 +232,8 @@
   <div class="cadastro-principal-3">
     <div class="cadastro-funcionamento">
       <form [formGroup]="step3Form">
-        <div class="input">
-          <label for="areaAtuacao">Área de atuação</label>
+        <div class="Box-select">
+          <label for="areaAtuacao">Área de Atuação</label>
           <input
             type="text"
             class="form-control"
@@ -308,7 +312,7 @@
           <div class="addturno">
             <button class="btn-add">
               <img src=" ../../../assets/addbutton.svg" alt="addbutton" />
-              <p>Adicionar turno</p>
+              <p>Adicionar Turno</p>
             </button>
           </div>
         </div>
@@ -356,8 +360,8 @@
     <div class="texto-imagem-3">
       <div class="text-horario">
         <h3 class="text-qualoseuhorario">
-          Qual sua área e
-          <h3 class="text-qualseuhorario2">horários?</h3>
+          Qual Sua Área E
+          <h3 class="text-qualseuhorario2">Horários?</h3>
         </h3>
 
         <div class="img-duvida">
