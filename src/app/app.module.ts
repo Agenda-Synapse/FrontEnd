@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalConfirmarComponent } from './components/modal-confirmar/modal-confirmar.component';
+import { provideEnvironmentNgxMask } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { ModalConfirmarComponent } from './components/modal-confirmar/modal-conf
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [provideEnvironmentNgxMask()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

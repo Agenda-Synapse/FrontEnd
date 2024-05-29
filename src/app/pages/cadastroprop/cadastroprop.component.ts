@@ -143,10 +143,20 @@ export class CadastropropComponent implements OnInit {
     Object.keys(formGroup.controls).forEach((field) => {
       const control = formGroup.get(field);
       control?.markAsTouched({ onlySelf: true });
+      console.log(`Field ${field} touched: ${control?.touched}`);
     });
   }
 
   goToHome(): void {
     this.router.navigate(['/']);
+  }
+
+  // Função para formatar o nome com a primeira letra maiúscula
+  formatarNome(event: any) {
+    const input = event.target;
+    const inputValue = input.value;
+    if (inputValue) {
+      input.value = inputValue.charAt(0).toUpperCase() + inputValue.slice(1).toLowerCase();
+    }
   }
 }

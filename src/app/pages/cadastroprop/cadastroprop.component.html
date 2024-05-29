@@ -7,7 +7,8 @@
       <form [formGroup]="step1Form">
         <div class="Box-forms">
           <label for="nome">Nome Proprietário</label>
-          <input type="text" class="form-control" formControlName="nome" />
+          <input type="text" class="form-control" formControlName="nome" (input)="formatarNome($event)" />
+
           <div
             *ngIf="
               step1Form.get('nome')!.invalid && step1Form.get('nome')!.touched
@@ -19,8 +20,13 @@
         </div>
         <div class="Box-forms">
           <label for="email">Email</label>
-          <input type="email" class="form-control" formControlName="email" />
-          <div *ngIf="step1Form.get('email')?.invalid && step1Form.get('email')?.touched" class="error">
+          <input type="email" class="form-control" formControlName="email"   />
+          <div
+            *ngIf="
+              step1Form.get('email')?.invalid && step1Form.get('email')?.touched
+            "
+            class="error"
+          >
             <div *ngIf="step1Form.get('email')?.errors?.['required']">
               O campo de e-mail é obrigatório.
             </div>
@@ -29,7 +35,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="Box-forms">
           <label for="senha">Senha</label>
           <input type="password" class="form-control" formControlName="senha" />
@@ -74,7 +80,7 @@
     <div class="texto-imagem">
       <div class="montarPerfil">
         <h2 class="text-perfil">
-          Vamos   Montar
+          Vamos Montar
           <h2 class="text-perfil2">Seu Perfil</h2>
         </h2>
 
@@ -107,7 +113,6 @@
   </div>
 </div>
 
-
 <div class="container-2" *ngIf="currentContainer === 2">
   <nav>
     <button class="back" routerLink="">Sair</button>
@@ -121,6 +126,7 @@
             type="text"
             class="form-control"
             formControlName="nomeEstabelecimento"
+            (input)="formatarNome($event)"
           />
           <div
             *ngIf="
@@ -134,7 +140,7 @@
         </div>
         <div class="Box-forms">
           <label for="endereço">Endereço</label>
-          <input type="text" class="form-control" formControlName="endereco" />
+          <input type="text" class="form-control" formControlName="endereco"  (input)="formatarNome($event)" />
           <div
             *ngIf="
               step2Form.get('endereco')!.invalid &&
@@ -148,9 +154,10 @@
         <div class="Box-forms">
           <label for="documentos">CNPJ ou CPF</label>
           <input
-            type="number"
+            type="text"
             class="form-control"
             formControlName="documentos"
+            mask="000.000.000-00"
           />
           <div
             *ngIf="
@@ -165,21 +172,27 @@
       </form>
     </div>
     <div class="adicionarfoto">
-      <input type="file" id="fileInput" (change)="onFileSelected($event)" style="display: none;" />
-      <button type="button" class="buttonadicionarfoto" (click)="triggerFileInputClick()">
+      <input
+        type="file"
+        id="fileInput"
+        (change)="onFileSelected($event)"
+        style="display: none"
+      />
+      <button
+        type="button"
+        class="buttonadicionarfoto"
+        (click)="triggerFileInputClick()"
+      >
         <img
           class="adicionar"
           src="../../../assets/addbutton.svg"
           alt="botaoadicionar"
         />
       </button>
-      <p>Insira uma imagem do seu Estabelecimento<p>
-      <div *ngIf="showImageError" class="error">
-        Selecione uma imagem.
-      </div>
+      <p>Insira uma imagem do seu Estabelecimento</p>
+      <p></p>
+      <div *ngIf="showImageError" class="error">Selecione uma imagem.</div>
     </div>
-    
-    
 
     <div class="texto-imagem-2">
       <div class="definaEstabelecimento">
@@ -234,11 +247,18 @@
       <form [formGroup]="step3Form">
         <div class="Box-select">
           <label for="areaAtuacao">Área de Atuação</label>
-          <input
-            type="text"
+          <select
             class="form-control"
             formControlName="areaAtuacao"
-          />
+            id="areaAtuacao"
+          >
+            <option value="" disabled selected>Selecione a Área de Atuação</option>
+            <option value="area1">Unhas</option>
+            <option value="area2">Barbearia</option>
+            <option value="area3">Maquiagem</option>
+            <option value="area4">Salão de Beleza</option>
+            <!-- Adicione mais opções conforme necessário -->
+          </select>
           <div
             *ngIf="
               step3Form.get('areaAtuacao')!.invalid &&
@@ -246,48 +266,32 @@
             "
             class="error"
           >
-            Área de atuação é obrigatória
+            Área de Atuação é obrigatória
           </div>
         </div>
+        
         <div class="horariosfun">
           <p>Funcionamento</p>
           <div class="Turno">
             <h4>Turno 1</h4>
-
             <div class="inputs">
               <div class="start">
                 <label for="inicioTurno1">Inicio</label>
                 <input
                   type="text"
                   class="form-control"
+                  [ngClass]="{'error-border': step3Form.get('inicioTurno1')!.invalid && step3Form.get('inicioTurno1')!.touched}"
                   formControlName="inicioTurno1"
                 />
-                <div
-                  *ngIf="
-                    step3Form.get('inicioTurno1')!.invalid &&
-                    step3Form.get('inicioTurno1')!.touched
-                  "
-                  class="error"
-                >
-                  Início do turno 1 é obrigatório
-                </div>
               </div>
               <div class="end">
                 <label for="terminoTurno1">Término</label>
                 <input
                   type="text"
                   class="form-control"
+                  [ngClass]="{'error-border': step3Form.get('terminoTurno1')!.invalid && step3Form.get('terminoTurno1')!.touched}"
                   formControlName="terminoTurno1"
                 />
-                <div
-                  *ngIf="
-                    step3Form.get('terminoTurno1')!.invalid &&
-                    step3Form.get('terminoTurno1')!.touched
-                  "
-                  class="error"
-                >
-                  Término do turno 1 é obrigatório
-                </div>
               </div>
             </div>
             <div class="days">
@@ -295,27 +299,20 @@
               <input
                 type="text"
                 class="form-control"
+                [ngClass]="{'error-border': step3Form.get('diasTurno1')!.invalid && step3Form.get('diasTurno1')!.touched}"
                 formControlName="diasTurno1"
               />
-              <div
-                *ngIf="
-                  step3Form.get('diasTurno1')!.invalid &&
-                  step3Form.get('diasTurno1')!.touched
-                "
-                class="error"
-              >
-                Dias do turno 1 são obrigatórios
-              </div>
             </div>
           </div>
-
+        
           <div class="addturno">
             <button class="btn-add">
-              <img src=" ../../../assets/addbutton.svg" alt="addbutton" />
+              <img src="../../../assets/addbutton.svg" alt="addbutton" />
               <p>Adicionar Turno</p>
             </button>
           </div>
         </div>
+        
       </form>
     </div>
 
@@ -388,7 +385,7 @@
     </div>
 
     <div class="proxima">
-      <button class="proxima-etapa" routerLink="">
+      <button class="proxima-etapa" >
         <p class="continuar">Continuar</p>
         <img class="seta" src="../../../assets/carbon_next-filled.svg" alt="" />
       </button>
