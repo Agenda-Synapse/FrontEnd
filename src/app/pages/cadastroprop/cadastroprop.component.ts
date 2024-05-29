@@ -33,7 +33,7 @@ export class CadastropropComponent implements OnInit {
       nomeEstabelecimento: ['', Validators.required],
       endereco: ['', Validators.required],
       documentos: ['', Validators.required],
-      imagem: [this.imagEmBase64]
+      imagem: ['']
     });
 
     this.step3Form = this.fb.group({
@@ -78,6 +78,7 @@ export class CadastropropComponent implements OnInit {
     const file = event.target.files[0];
     const reader = new FileReader();
     reader.onloadend = () => {
+      this.step2Form.controls['imagem'].patchValue(reader.result);
       const base64String = reader.result as string;
       this.imagEmBase64 = base64String;
     };
