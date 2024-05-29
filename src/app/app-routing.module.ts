@@ -46,6 +46,7 @@ const routes: Routes = [
         (m) => m.CadastropropModule
       ),
   },
+  { path: 'perfilprop', loadChildren: () => import('./pages/perfilprop/perfilprop.module').then(m => m.PerfilpropModule) },
 ];
 
 @NgModule({
