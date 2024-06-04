@@ -14,8 +14,7 @@ import { CadastropropComponent, } from './cadastroprop.component';
     CommonModule,
     CadastropropRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
- 
+    ReactiveFormsModule
   ]
 })
 export class CadastropropModule { }

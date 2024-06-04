@@ -44,72 +44,44 @@
   .topo-meio {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    border: none;
-    height: 50px;
-    padding-bottom: 300px;
-    padding-top: 100px;
-    padding-left: 15%;
+    height: 85%;
 
-    .title {
-      color: var(--bg-princi);
+    .title{
+      font-size: 5vh;
       font-family: var(--second-font);
-      font-size: var(--second-font-size);
-      padding-bottom: 20px;
-      padding-right: 20px;
+      font-weight: 500;
+      color: var(--bg-princi);
     }
 
-    .info-data {
+    .infos-top{
       display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      // align-items: flex-start;
-      // padding-top: 20px;
-      // height: 10px;
-      width: 335px;
-    }
+      align-items: center;
+      justify-content: space-evenly;
+      width: -webkit-fill-available;
+      margin-top: 3rem;
 
-    .data {
-      height: 10px;
-      font-size: 24px;
-      // display: flex;
-      // align-items: center;
-      // flex-direction: column;
-      font-family: var(--second-font);
-      color: var(--bg-princi);
-      padding: 10px;
-    }
-    .horario {
-      height: 10px;
-      font-size: 24px;
-
-      font-family: var(--second-font);
-      color: var(--bg-princi);
-      padding: 10px;
-    }
-
-    .barb-aberto {
-      display: flex;
-      justify-content: flex-start;
-      height: 10px;
-      width: 10px;
-      padding: 20px;
-
-      .Aberto {
-        height: 50px;
-        width: max-content;
+      .infos-dh{
         display: flex;
-        align-items: center;
-        text-align: center;
-        padding: 0.5rem;
-
-        font-size: var(--largebutton-font-size);
-        font-family: var(--second-font);
+        flex-direction: column;
         color: var(--bg-princi);
-        border: solid 20px black;
-        border-radius: 8px;
-        border-width: 1px;
+        font-family: var(--second-font);
+
+        .day{
+          font-size: 2.25vh;
+          font-weight: 300;
+        }
+
+        .hr{
+          font-size: 3.5vh;
+        }
+      }
+
+      .status{
+        color: var(--bg-princi);
+        font-family: var(--second-font);
+        border-radius: .5rem;
+        padding: 2vh 2vw;
         background-color: var(--green);
       }
     }
