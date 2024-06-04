@@ -1,0 +1,146 @@
+.container-1 {
+  height: 100%;
+  width: calc(100%);
+
+  .topo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 37vh;
+    width: calc(100% - 15px);
+    border: solid 1px #000000;
+    background-color: var(--black);
+
+    .backbutton {
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+      height: 36vh;
+      width: 9vw;
+
+      .Voltar {
+        width: 5vw;
+        display: flex;
+        vertical-align: top;
+        background-color: var(--black);
+        font-family: var(--third-font);
+        color: var(--bg-princi);
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+
+    .perfil-barbeiro {
+      border: none;
+      border-radius: 50%;
+      outline: none;
+      width: 31vh;
+      height: 15vw;
+      display: flex;
+      justify-content: space-between;
+
+      //    align-items: right; /* Centraliza verticalmente a imagem */
+      //    padding-right: 10px; /* Espaçamento à direita para a imagem */
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .topedit {
+        height: 27vh;
+        width: 5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        .editpht {
+          height: max-content;
+          width: max-content;
+          background-color: var(--black);
+          justify-content: center;
+          border: none;
+          cursor: pointer;
+
+          img {
+            height: 18px;
+            width: 18px;
+            border-radius: 0%;
+          }
+        }
+      }
+    }
+
+    .topo-meio {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border: none;
+      height: 30vh;
+
+      .title {
+        color: var(--bg-princi);
+        font-family: var(--second-font);
+        font-size: var(--second-font-size);
+        padding-bottom: 20px;
+        padding-right: 20px;
+      }
+
+      .info-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 335px;
+      }
+
+      .data {
+        height: 10px;
+        font-size: 24px;
+   
+        font-family: var(--second-font);
+        color: var(--bg-princi);
+        padding: 10px;
+      }
+      .horario {
+        height: 10px;
+        font-size: 24px;
+
+        font-family: var(--second-font);
+        color: var(--bg-princi);
+        padding: 10px;
+      }
+
+      .barb-aberto {
+        display: flex;
+        justify-content: flex-start;
+        height: 10px;
+        width: 10px;
+        padding: 20px;
+
+        .Aberto {
+          height: 50px;
+          width: max-content;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          padding: 0.5rem;
+
+          font-size: var(--largebutton-font-size);
+          font-family: var(--second-font);
+          color: var(--bg-princi);
+          border: solid 20px black;
+          border-radius: 8px;
+          border-width: 1px;
+          background-color: var(--green);
+        }
+      }
+    }
+  }
+}
