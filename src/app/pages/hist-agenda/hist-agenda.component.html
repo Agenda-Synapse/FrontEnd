@@ -1,108 +1,61 @@
 <nav class="top-nav">
 
-    
 
-        <button class="cadastro-loja">Cadastrar Loja</button>
+
+        <button class="cadastro-loja" routerLink="/cadastroprop">Cadastrar Loja</button>
         <label for="cadastro-loja"></label>
 
    <div class="searchbar">
     <input class="search-txt"  type="image" src="../../../assets/Vector.svg" placeholder="" >
-    
+
    </div>
-        
+
 <div class="botões">
 
-    <button class="botaohome">
+    <button class="botaohome" routerLink="">
         <img src=" ../../../assets/homesearchbar.png" alt="botao para o inicio">
        </button>
        <input class="botaoagenda" type="image" src="../../../assets/carbon_calendar.png">
 
 </div>
-   
-        
+
+
 
 </nav>
 
 <div class="texto-princi">
-
-    <h1>Seus agendamentos</h1>
+  <h1>Seus agendamentos</h1>
 </div>
 
+<div class="agendamentos">
+  <div class="left-agenda">
+    <div class="hist" *ngFor="let agendamento of agendamentos">
+      <div class="procedimento">
+        <p>Procedimento</p>
+        <h4>{{ agendamento.procedimento }}</h4>
+      </div>
 
-    <div class="agendamentos">
+      <div class="data">
+        <p>Dia</p>
+        <h4>{{ agendamento.data }}</h4>
+      </div>
+      <div class="horario">
+        <p>Horário</p>
+        <h4>{{ agendamento.horario }}</h4>
+      </div>
+      <div class="estabelecimento">
+        <p>Estabelecimento</p>
+        <h4>{{ agendamento.local }}</h4>
+      </div>
 
-        <div class="left-agenda">
-
-        
-
-
-            <div class="hist" *ngFor="let agendamento of agendamentos">
-                
-                <div class="procedimento">
-
-                    <p>Procedimento</p>
-                    <h4> {{agendamento.procedimento}} </h4>
-
-                </div>
-
-                <div class="data">
-
-                    <p>Dia</p>
-                    <h4>{{agendamento.data}}</h4>
-
-                </div>
-                <div class="horario">
-                    
-                    <p>Horário</p>
-                    <h4>{{agendamento.horario}}</h4>
-
-
-                </div>
-                <div class="estabelecimento">
-
-
-                    <p>Estabelecimento</p>
-                    <h4>{{agendamento.local}}</h4>
-
-                </div>
-
-
-                <!-- <div class="status"> -->
-
-                    <!-- <button class="trash" type="submit">
-                        <img src=" ../../../assets/mdi_trash.png " alt="excluir agendamento">
-                    </button> -->
-
-
-                <!-- </div> -->
-
-                <div class="status-loja">
-                    <p>{{agendamento.status}}</p>
-
-                </div>
-                
-
-            </div>
-
-
-        </div>
-        
-        
-        
-        <div class="right-agenda">
-        
-            <img class="relogio" src="../../../assets/relogioagenda.png">
-        
-        
-        </div>
-        
-
+      <div class="status-loja">
+        <p>{{ agendamento.status }}</p>
+      </div>
     </div>
+  </div>
 
-<!-- </div> -->
-
-
-
-
-
+  <div class="right-agenda">
+    <img class="relogio" src="../../../assets/relogioagenda.png" />
+  </div>
+</div>
 

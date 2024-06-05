@@ -32,7 +32,21 @@ const routes: Routes = [
         (m) => m.HistAgendaModule
       ),
   },
-  { path: 'loginprop', loadChildren: () => import('./pages/loginprop/loginprop.module').then(m => m.LoginpropModule) },
+  {
+    path: 'loginprop',
+    loadChildren: () =>
+      import('./pages/loginprop/loginprop.module').then(
+        (m) => m.LoginpropModule
+      ),
+  },
+  {
+    path: 'cadastroprop',
+    loadChildren: () =>
+      import('./pages/cadastroprop/cadastroprop.module').then(
+        (m) => m.CadastropropModule
+      ),
+  },
+  { path: 'perfilprop', loadChildren: () => import('./pages/perfilprop/perfilprop.module').then(m => m.PerfilpropModule) },
 ];
 
 @NgModule({

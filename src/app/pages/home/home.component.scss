@@ -32,6 +32,8 @@
       background-color: var(--bg-princi);
       border: none;
       border-radius: 0.5rem 0 0 0.5rem;
+      font-family: var(--second-font);
+      color: var(--black);
     }
 
     .insert:focus {
@@ -45,10 +47,13 @@
       object-fit: contain;
       border-radius: 0 0.5rem 0.5rem 0;
       background-color: var(--bg-princi);
+      transition: 0.3 ease;
     }
 
     .lupa:hover {
       cursor: pointer;
+      transform: scale(0.9);
+      border: solid 3px var(--bg-princi);;
     }
   }
 
@@ -57,6 +62,15 @@
     align-items: center;
     justify-content: space-between;
     width: 9%;
+    transition: 0.3s ease;
+
+    .calendario:hover{
+      cursor: pointer;
+    }
+
+    .calendario:active{
+      transform: scale(1.05);
+    }
   }
 }
 
@@ -83,9 +97,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
+    width: 55%;
     height: 30%;
-    margin-top: 4%;
+    margin-top: 3%;
 
     .cat-img {
       height: 100%;
@@ -104,7 +118,7 @@
     align-items: center;
     justify-content: flex-start;
     width: calc(100% - 2rem);
-    padding-left: 2rem;
+    padding-left: 13vw;
     margin-top: 4%;
 
     .es {
@@ -129,7 +143,7 @@
       display: flex;
       align-items: center;
       width: 45%;
-      height: 8rem;
+      min-height: 8rem;
       background-color: #ffffff;
       border-radius: 0.5rem;
       box-shadow: 0 4px 4px 0 #00000025;

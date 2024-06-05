@@ -1,14 +1,14 @@
 <!-- para commitar -->
 
 <div class="top">
-  <button class="btn-cad">Cadastrar loja</button>
+  <button class="btn-cad" routerLink="/cadastroprop">Cadastrar loja</button>
   <div class="search-bar">
     <input class="insert" type="text" placeholder="Procure a loja desejada" />
     <img class="lupa" src="../../../assets/Vector.svg" alt="lupa" />
   </div>
   <div class="home">
     <img src="../../../assets/home.svg" alt="home" />
-    <img src="../../../assets/calendar.svg" alt="calendario" />
+    <img class="calendario" src="../../../assets/calendar.svg" alt="calendario" routerLink="/histAgenda" />
   </div>
 </div>
 <div class="content">
@@ -32,7 +32,7 @@
         <!-- <div class="bruno"> -->
           <img
             class="fachada"
-            src="{{loja.imagemUrl}}"
+            src="https://picsum.photos/200"
             alt="Fachada"
           />
         <!-- </div> -->
