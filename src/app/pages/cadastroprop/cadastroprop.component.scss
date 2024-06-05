@@ -57,9 +57,7 @@
           box-shadow: 0 4px 4px 0 #0000003b;
         }
 
-        .form-control:hover {
-          cursor: pointer;
-        }
+
       }
     }
 
@@ -234,9 +232,7 @@
           border-color: lightgray;
           box-shadow: 0 4px 4px 0 #0000003b;
         }
-        .form-control:hover {
-          cursor: pointer;
-        }
+
       }
     }
 
@@ -450,9 +446,6 @@
           border-color: lightgray;
           box-shadow: 1px 4px 4px 1px #0000003b;
         }
-        .form-control:hover {
-          cursor: pointer;
-        }
       }
 
       //////////////////////////////////////
@@ -509,9 +502,6 @@
               border-color: lightgray;
               box-shadow: 1px 4px 4px 1px #0000003b;
             }
-            .form-control:hover {
-              transform: scale(1.1);
-            }
           }
 
           .days {
@@ -529,9 +519,6 @@
               border-radius: 4px;
               border-color: lightgray;
               box-shadow: 1px 4px 4px 1px #0000003b;
-            }
-            .form-control:hover {
-              transform: scale(1.1);
             }
           }
         }
@@ -631,7 +618,6 @@
               border-radius: 4px;
               border-color: lightgray;
               box-shadow: 1px 4px 4px 1px #0000003b;
-              cursor: default;
             }
           }
         }

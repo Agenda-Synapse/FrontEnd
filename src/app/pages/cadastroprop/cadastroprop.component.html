@@ -29,7 +29,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="Box-forms">
           <label for="senha">Senha</label>
           <input type="password" class="form-control" formControlName="senha" />
@@ -136,12 +136,8 @@
           <label for="endereço">Endereço</label>
           <input type="text" class="form-control" formControlName="endereco" />
           <div
-            *ngIf="
-              step2Form.get('endereco')!.invalid &&
-              step2Form.get('endereco')!.touched
-            "
-            class="error"
-          >
+            *ngIf="step2Form.get('endereco')!.invalid && step2Form.get('endereco')!.touched"
+            class="error">
             Endereço é obrigatório
           </div>
         </div>
@@ -178,8 +174,8 @@
         Selecione uma imagem.
       </div>
     </div>
-    
-    
+
+
 
     <div class="texto-imagem-2">
       <div class="definaEstabelecimento">
