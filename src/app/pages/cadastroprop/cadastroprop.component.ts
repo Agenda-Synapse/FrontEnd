@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  Validators,
+  AbstractControl,
+} from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -22,18 +27,22 @@ export class CadastropropComponent implements OnInit {
   constructor(private fb: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
-    this.step1Form = this.fb.group({
-      nome: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      senha: ['', Validators.required],
-      confirmarSenha: ['', Validators.required],
-    }, { validator: this.passwordMatchValidator });
+    this.step1Form = this.fb.group(
+      {
+        nome: ['', Validators.required],
+        telefone: ['', [Validators.required, Validators.pattern(/^\(\d{2}\) \d{5}-\d{4}$/)]],
+        email: ['', [Validators.required, Validators.email]],
+        senha: ['', Validators.required],
+        confirmarSenha: ['', Validators.required],
+      },
+      { validator: this.passwordMatchValidator }
+    );
 
     this.step2Form = this.fb.group({
       nomeEstabelecimento: ['', Validators.required],
       endereco: ['', Validators.required],
       documentos: ['', Validators.required],
-      imagem: ['']
+      imagem: [''],
     });
 
     this.step3Form = this.fb.group({
@@ -44,7 +53,9 @@ export class CadastropropComponent implements OnInit {
     });
   }
 
-  passwordMatchValidator(control: AbstractControl): { [key: string]: boolean } | null {
+  passwordMatchValidator(
+    control: AbstractControl
+  ): { [key: string]: boolean } | null {
     const senha = control.get('senha');
     const confirmarSenha = control.get('confirmarSenha');
     if (senha && confirmarSenha && senha.value !== confirmarSenha.value) {
@@ -105,7 +116,7 @@ export class CadastropropComponent implements OnInit {
         this.validateAllFormFields(this.step1Form);
       }
     } else if (this.currentContainer === 2) {
-      this.showImageError = !this.isImageSelected; // Mostrar erro se a imagem não for selecionada
+      this.showImageError = !this.isImageSelected;
       if (this.isStep2Complete()) {
         console.log('Segunda parte do form', this.step2Form.value);
         this.currentContainer = 3;
@@ -151,12 +162,28 @@ export class CadastropropComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
-  // Função para formatar o nome com a primeira letra maiúscula
   formatarNome(event: any) {
     const input = event.target;
     const inputValue = input.value;
     if (inputValue) {
-      input.value = inputValue.charAt(0).toUpperCase() + inputValue.slice(1).toLowerCase();
+      input.value =
+        inputValue.charAt(0).toUpperCase() + inputValue.slice(1).toLowerCase();
     }
   }
-}
+
+  formatarTelefone(event: any): void {
+    let input = event.target.value.replace(/\D/g, '');
+    if (input.length > 10) {
+      input = input.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
+    } else if (input.length > 5) {
+      input = input.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, '($1) $2-$3');
+    } else if (input.length > 2) {
+      input = input.replace(/^(\d{2})(\d{0,5})/, '($1) $2');
+    } else {
+      input = input.replace(/^(\d*)/, '($1');
+    }
+    event.target.value = input;
+    this.step1Form.controls['telefone'].setValue(input, { emitEvent: false });
+  }
+  }
+
