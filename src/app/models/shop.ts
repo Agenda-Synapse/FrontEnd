@@ -1,8 +1,11 @@
 export interface Loja {
-    nome: string;
-    imagemUrl: string;
-    endereco: string;
-    status: string;
-    tipo: string;
+    id: number
+    nome: string
+    imagem: string
+    endereco: string
+    categoria: string
+    createdAt: string
+    updatedAt: string
 }
-  
+
+// export interface   
