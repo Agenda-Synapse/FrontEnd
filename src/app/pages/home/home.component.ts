@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   listarLojas() {
     return this.proprietarioService.getEstabelecimentos().subscribe(card => {
       console.log(card);
+      this.cards = card;
     })
   }
 

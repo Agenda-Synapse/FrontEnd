@@ -11,10 +11,10 @@ export class ProprietarioService {
 
   constructor(private http: HttpClient) { }
 
-  getEstabelecimentos(): Observable<{loja:Loja[]}>{
+  getEstabelecimentos(): Observable<Loja[]>{
     const headerrs = new HttpHeaders({
       'ngrok-skip-browser-warning': 'true'
     })
-    return this.http.get<{loja: Loja[]}>(environment.API_URL + "/estabelecimentos", {headers: headerrs})
+    return this.http.get<Loja[]>(environment.API_URL + "/estabelecimentos", {headers: headerrs})
   }
 }
