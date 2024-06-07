@@ -30,7 +30,8 @@ export class CadastropropComponent implements OnInit {
     this.step1Form = this.fb.group(
       {
         nome: ['', Validators.required],
-        telefone: ['', [Validators.required, Validators.pattern(/^\(\d{2}\) \d{5}-\d{4}$/)]],
+        telefone: ['', Validators.required],
+        documentos: ['', Validators.required],
         email: ['', [Validators.required, Validators.email]],
         senha: ['', Validators.required],
         confirmarSenha: ['', Validators.required],
@@ -41,7 +42,7 @@ export class CadastropropComponent implements OnInit {
     this.step2Form = this.fb.group({
       nomeEstabelecimento: ['', Validators.required],
       endereco: ['', Validators.required],
-      documentos: ['', Validators.required],
+ 
       imagem: [''],
     });
 
@@ -171,19 +172,6 @@ export class CadastropropComponent implements OnInit {
     }
   }
 
-  formatarTelefone(event: any): void {
-    let input = event.target.value.replace(/\D/g, '');
-    if (input.length > 10) {
-      input = input.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
-    } else if (input.length > 5) {
-      input = input.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, '($1) $2-$3');
-    } else if (input.length > 2) {
-      input = input.replace(/^(\d{2})(\d{0,5})/, '($1) $2');
-    } else {
-      input = input.replace(/^(\d*)/, '($1');
-    }
-    event.target.value = input;
-    this.step1Form.controls['telefone'].setValue(input, { emitEvent: false });
-  }
+  
   }
 

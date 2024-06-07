@@ -15,14 +15,21 @@
 
         <div class="Box-forms">
           <label for="telefone">Telefone</label>
-          <input type="tel" class="form-control" formControlName="telefone" (input)="formatarTelefone($event)" />
+          <input type="tel" class="form-control" formControlName="telefone" mask="(00)00000-0000"/>
           <div *ngIf="step1Form.get('telefone')!.invalid && step1Form.get('telefone')!.touched" class="error">
             <div *ngIf="step1Form.get('telefone')!.errors?.['required']">
               Telefone é obrigatório
             </div>
-            <div *ngIf="step1Form.get('telefone')!.errors?.['pattern']">
-              Por favor, insira um telefone válido.
-            </div>
+         
+          </div>
+        </div>
+
+
+        <div class="Box-forms">
+          <label for="documentos">CNPJ ou CPF</label>
+          <input type="text" class="form-control" formControlName="documentos" mask="000.000.000-00" />
+          <div *ngIf="step1Form.get('documentos')!.invalid && step1Form.get('documentos')!.touched" class="error">
+            CNPJ ou CPF é obrigatório
           </div>
         </div>
 
@@ -116,13 +123,7 @@
           </div>
         </div>
 
-        <div class="Box-forms">
-          <label for="documentos">CNPJ ou CPF</label>
-          <input type="text" class="form-control" formControlName="documentos" mask="000.000.000-00" />
-          <div *ngIf="step2Form.get('documentos')!.invalid && step2Form.get('documentos')!.touched" class="error">
-            CNPJ ou CPF é obrigatório
-          </div>
-        </div>
+        
       </form>
     </div>
     <div class="adicionarfoto">
