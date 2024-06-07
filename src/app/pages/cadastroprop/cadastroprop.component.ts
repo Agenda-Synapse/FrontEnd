@@ -87,11 +87,6 @@ export class CadastropropComponent implements OnInit {
     }
   }
 
-  triggerFileInputClick(): void {
-    const fileInput = document.getElementById('fileInput') as HTMLElement;
-    fileInput.click();
-  }
-
   next() {
     this.showError = false;
     this.isFormTouched = true;
@@ -99,6 +94,7 @@ export class CadastropropComponent implements OnInit {
     if (this.currentContainer === 1) {
       if (this.isStep1Complete()) {
         console.log('primeira parte do form', this.step1Form.value);
+
         this.currentContainer = 2;
       } else {
         this.showError = true;

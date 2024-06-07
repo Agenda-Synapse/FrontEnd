@@ -161,8 +161,8 @@
       </form>
     </div>
     <div class="adicionarfoto">
-      <input type="file" id="fileInput" (change)="onFileSelected($event)" style="display: none;" />
-      <button type="button" class="buttonadicionarfoto" (click)="triggerFileInputClick()">
+      <input #fileup type="file" id="fileInput" (change)="onFileSelected($event)" style="display: none;" />
+      <button type="button" class="buttonadicionarfoto" (click)="fileup.click()">
         <img
           class="adicionar"
           src="../../../assets/addbutton.svg"
