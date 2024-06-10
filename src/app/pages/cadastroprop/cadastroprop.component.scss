@@ -40,8 +40,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 5px;
-        gap: 8px;
+        margin: .5rem;
         font-family: var(--fourth-font);
 
         label {
@@ -50,8 +49,7 @@
 
         .form-control {
           padding: 10px;
-          padding-right: 100px;
-          width: 100%;
+          width: 27vw;
           border-radius: 4px;
           border-color: lightgray;
           box-shadow: 0 4px 4px 0 #0000003b;
@@ -443,7 +441,7 @@
         }
 
         .form-control {
-          padding: 10px;  
+          padding: 10px;
           width: 23vw;
           border-radius: 4px;
           background-color: white;
@@ -455,14 +453,14 @@
           &:focus {
             background-color: var(--bg-princi);
             border: 1px solid var(--bg-princi);
-          
+
           }
           &:hover {
             cursor: pointer;
           }
         }
 
-        
+
       }
 
       //////////////////////////////////////
@@ -492,9 +490,9 @@
             justify-content: space-between;
             padding: 5px;
             font-family: var(--fourth-font);
-            
-           
-            
+
+
+
 
             .start {
               height: 50px;
@@ -517,7 +515,7 @@
               display: flex;
               justify-content: space-between;
               padding: 2px;
-              width: 60%;
+              width: 8vw;
               border-radius: 4px;
               border-color: lightgray;
               box-shadow: 1px 4px 4px 1px #0000003b;
@@ -526,7 +524,7 @@
                 border: 1px solid red;
               }
             }
-            
+
           }
 
           .days {
@@ -548,7 +546,7 @@
                 border: 1px solid red;
               }
             }
-           
+
           }
         }
 

@@ -8,61 +8,61 @@
         <div class="Box-forms">
           <label for="nome">Nome Proprietário</label>
           <input type="text" class="form-control" formControlName="nome" (input)="formatarNome($event)" />
-          <div *ngIf="step1Form.get('nome')!.invalid && step1Form.get('nome')!.touched" class="error">
+          <p *ngIf="step1Form.get('nome')!.invalid && step1Form.get('nome')!.touched" class="error">
             Nome é obrigatório
-          </div>
+          </p>
         </div>
 
         <div class="Box-forms">
           <label for="telefone">Telefone</label>
-          <input type="tel" class="form-control" formControlName="telefone" mask="(00)00000-0000"/>
+          <input type="tel" class="form-control" formControlName="telefone" mask="(00) 00000 - 0000"/>
           <div *ngIf="step1Form.get('telefone')!.invalid && step1Form.get('telefone')!.touched" class="error">
-            <div *ngIf="step1Form.get('telefone')!.errors?.['required']">
+            <p *ngIf="step1Form.get('telefone')!.errors?.['required']">
               Telefone é obrigatório
-            </div>
-         
+            </p>
+
           </div>
         </div>
 
 
         <div class="Box-forms">
           <label for="documentos">CNPJ ou CPF</label>
-          <input type="text" class="form-control" formControlName="documentos" mask="000.000.000-00" />
-          <div *ngIf="step1Form.get('documentos')!.invalid && step1Form.get('documentos')!.touched" class="error">
+          <input placeholder="111.111.111-00 / 12.155.155/0001-05" type="text" class="form-control" formControlName="documentos" mask="000.000.000 - 00 || 00.000.000/0000-00" />
+          <p *ngIf="step1Form.get('documentos')!.invalid && step1Form.get('documentos')!.touched" class="error">
             CNPJ ou CPF é obrigatório
-          </div>
+          </p>
         </div>
 
         <div class="Box-forms">
           <label for="email">Email</label>
           <input type="email" class="form-control" formControlName="email" />
           <div *ngIf="step1Form.get('email')?.invalid && step1Form.get('email')?.touched" class="error">
-            <div *ngIf="step1Form.get('email')?.errors?.['required']">
+            <p *ngIf="step1Form.get('email')?.errors?.['required']">
               O campo de e-mail é obrigatório.
-            </div>
-            <div *ngIf="step1Form.get('email')?.errors?.['email']">
+            </p>
+            <p *ngIf="step1Form.get('email')?.errors?.['email']">
               Por favor, insira um e-mail válido.
-            </div>
+            </p>
           </div>
         </div>
 
         <div class="Box-forms">
           <label for="senha">Senha</label>
           <input type="password" class="form-control" formControlName="senha" />
-          <div *ngIf="step1Form.get('senha')!.invalid && step1Form.get('senha')!.touched" class="error">
+          <p *ngIf="step1Form.get('senha')!.invalid && step1Form.get('senha')!.touched" class="error">
             Senha é obrigatória
-          </div>
+          </p>
         </div>
 
         <div class="Box-forms">
           <label for="confirmarsenha">Confirmar Senha</label>
           <input type="password" class="form-control" formControlName="confirmarSenha" />
-          <div *ngIf="step1Form.get('confirmarSenha')!.invalid && step1Form.get('confirmarSenha')!.touched" class="error">
+          <p *ngIf="step1Form.get('confirmarSenha')!.invalid && step1Form.get('confirmarSenha')!.touched" class="error">
             Confirmação de senha é obrigatória
-          </div>
-          <div *ngIf="step1Form.errors?.['passwordMismatch'] && step1Form.get('confirmarSenha')!.touched" class="error">
+          </p>
+          <p *ngIf="step1Form.errors?.['passwordMismatch'] && step1Form.get('confirmarSenha')!.touched" class="error">
             As senhas não coincidem
-          </div>
+          </p>
         </div>
       </form>
     </div>
@@ -123,7 +123,7 @@
           </div>
         </div>
 
-        
+
       </form>
     </div>
     <div class="adicionarfoto">
@@ -199,11 +199,11 @@
             <div class="inputs">
               <div class="start">
                 <label for="inicioTurno1">Inicio</label>
-                <input type="text" class="form-control" [ngClass]="{'error-border': step3Form.get('inicioTurno1')!.invalid && step3Form.get('inicioTurno1')!.touched}" formControlName="inicioTurno1" />
+                <input type="time" class="form-control" [ngClass]="{'error-border': step3Form.get('inicioTurno1')!.invalid && step3Form.get('inicioTurno1')!.touched}" formControlName="inicioTurno1" />
               </div>
               <div class="end">
                 <label for="terminoTurno1">Término</label>
-                <input type="text" class="form-control" [ngClass]="{'error-border': step3Form.get('terminoTurno1')!.invalid && step3Form.get('terminoTurno1')!.touched}" formControlName="terminoTurno1" />
+                <input type="time" class="form-control" [ngClass]="{'error-border': step3Form.get('terminoTurno1')!.invalid && step3Form.get('terminoTurno1')!.touched}" formControlName="terminoTurno1" />
               </div>
             </div>
             <div class="days">

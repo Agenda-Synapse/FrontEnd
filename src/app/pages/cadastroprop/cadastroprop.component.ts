@@ -15,6 +15,7 @@ import { Router } from '@angular/router';
 export class CadastropropComponent implements OnInit {
   currentContainer: number = 1;
   imagEmBase64!: string;
+  maskCpfCnpj: string = '000.000.000-00'
 
   step1Form!: FormGroup;
   step2Form!: FormGroup;
@@ -42,7 +43,7 @@ export class CadastropropComponent implements OnInit {
     this.step2Form = this.fb.group({
       nomeEstabelecimento: ['', Validators.required],
       endereco: ['', Validators.required],
- 
+
       imagem: [''],
     });
 
@@ -172,6 +173,21 @@ export class CadastropropComponent implements OnInit {
     }
   }
 
-  
+  cpfcnpjmask = function (rawValue: string) {
+    var numbers = rawValue.match(/\d/g);
+    var numberLength = 0;
+
+    if (numbers) {
+      numberLength = numbers.join('').length;
+    }
+
+    if (numberLength <= 11) {
+      return [/[0-9]/, /[0-9]/, /[0-9]/, '.', /[0-9]/, /[0-9]/, /[0-9]/, '.', /[0-9]/, /[0-9]/, /[0-9]/, '-', /[0-9]/, /[0-9]/];
+    } else {
+      return [/[0-9]/, /[0-9]/, '.', /[0-9]/, /[0-9]/, /[0-9]/, '.', /[0-9]/, /[0-9]/, /[0-9]/, '/', /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, '-', /[0-9]/, /[0-9]/];
+    }
+  }
+
+
   }
 
