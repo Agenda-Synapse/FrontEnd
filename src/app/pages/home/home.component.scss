@@ -16,6 +16,15 @@
     color: var(--bg-princi);
     font-family: var(--second-font);
     font-size: 1rem;
+    transition: .5s ease;
+
+    &:hover{
+      cursor: pointer;
+    }
+
+    &:active{
+      transform: scale(.95);
+    }
   }
 
   .search-bar {
