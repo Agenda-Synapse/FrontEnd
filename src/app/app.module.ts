@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalConfirmarComponent } from './components/modal-confirmar/modal-confirmar.component';
+import { provideEnvironmentNgxMask } from 'ngx-mask';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -16,7 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [provideEnvironmentNgxMask()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

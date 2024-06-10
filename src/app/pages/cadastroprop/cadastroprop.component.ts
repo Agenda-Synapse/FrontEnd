@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  Validators,
+  AbstractControl,
+} from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,6 +15,7 @@ import { Router } from '@angular/router';
 export class CadastropropComponent implements OnInit {
   currentContainer: number = 1;
   imagEmBase64!: string;
+  maskCpfCnpj: string = '000.000.000-00'
 
   step1Form!: FormGroup;
   step2Form!: FormGroup;
@@ -22,18 +28,23 @@ export class CadastropropComponent implements OnInit {
   constructor(private fb: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
-    this.step1Form = this.fb.group({
-      nome: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      senha: ['', Validators.required],
-      confirmarSenha: ['', Validators.required],
-    }, { validator: this.passwordMatchValidator });
+    this.step1Form = this.fb.group(
+      {
+        nome: ['', Validators.required],
+        telefone: ['', Validators.required],
+        documentos: ['', Validators.required],
+        email: ['', [Validators.required, Validators.email]],
+        senha: ['', Validators.required],
+        confirmarSenha: ['', Validators.required],
+      },
+      { validator: this.passwordMatchValidator }
+    );
 
     this.step2Form = this.fb.group({
       nomeEstabelecimento: ['', Validators.required],
       endereco: ['', Validators.required],
-      documentos: ['', Validators.required],
-      imagem: ['']
+
+      imagem: [''],
     });
 
     this.step3Form = this.fb.group({
@@ -44,7 +55,9 @@ export class CadastropropComponent implements OnInit {
     });
   }
 
-  passwordMatchValidator(control: AbstractControl): { [key: string]: boolean } | null {
+  passwordMatchValidator(
+    control: AbstractControl
+  ): { [key: string]: boolean } | null {
     const senha = control.get('senha');
     const confirmarSenha = control.get('confirmarSenha');
     if (senha && confirmarSenha && senha.value !== confirmarSenha.value) {
@@ -101,7 +114,7 @@ export class CadastropropComponent implements OnInit {
         this.validateAllFormFields(this.step1Form);
       }
     } else if (this.currentContainer === 2) {
-      this.showImageError = !this.isImageSelected; // Mostrar erro se a imagem não for selecionada
+      this.showImageError = !this.isImageSelected;
       if (this.isStep2Complete()) {
         console.log('Segunda parte do form', this.step2Form.value);
         this.currentContainer = 3;
@@ -139,10 +152,38 @@ export class CadastropropComponent implements OnInit {
     Object.keys(formGroup.controls).forEach((field) => {
       const control = formGroup.get(field);
       control?.markAsTouched({ onlySelf: true });
+      console.log(`Field ${field} touched: ${control?.touched}`);
     });
   }
 
   goToHome(): void {
     this.router.navigate(['/']);
   }
-}
+
+  formatarNome(event: any) {
+    const input = event.target;
+    const inputValue = input.value;
+    if (inputValue) {
+      input.value =
+        inputValue.charAt(0).toUpperCase() + inputValue.slice(1).toLowerCase();
+    }
+  }
+
+  cpfcnpjmask = function (rawValue: string) {
+    var numbers = rawValue.match(/\d/g);
+    var numberLength = 0;
+
+    if (numbers) {
+      numberLength = numbers.join('').length;
+    }
+
+    if (numberLength <= 11) {
+      return [/[0-9]/, /[0-9]/, /[0-9]/, '.', /[0-9]/, /[0-9]/, /[0-9]/, '.', /[0-9]/, /[0-9]/, /[0-9]/, '-', /[0-9]/, /[0-9]/];
+    } else {
+      return [/[0-9]/, /[0-9]/, '.', /[0-9]/, /[0-9]/, /[0-9]/, '.', /[0-9]/, /[0-9]/, /[0-9]/, '/', /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, '-', /[0-9]/, /[0-9]/];
+    }
+  }
+
+
+  }
+

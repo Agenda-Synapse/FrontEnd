@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CadastropropRoutingModule } from './cadastroprop-routing.module';
 import { CadastropropComponent, } from './cadastroprop.component';
+import { NgxMaskDirective, NgxMaskPipe } from 'ngx-mask';
 
 
 
@@ -14,7 +15,9 @@ import { CadastropropComponent, } from './cadastroprop.component';
     CommonModule,
     CadastropropRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMaskDirective,
+    NgxMaskPipe
   ]
 })
 export class CadastropropModule { }
