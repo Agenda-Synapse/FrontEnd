@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CadastropropComponent } from './cadastroprop.component';
+import { CadastropropComponent } from './CadastropropComponent';
 
 const routes: Routes = [{ path: '', component: CadastropropComponent }];
 

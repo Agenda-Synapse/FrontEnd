@@ -12,9 +12,8 @@ export interface Proprietario {
   nome: string;
   email: string;
   senha: string;
-  cpf: string;
-  cnpj: string;
+  cpfOuCnpj: string;
   telefone: string;
-  cargo: number;
-  idEstabelecimento: number;
+  cargo: string;
+  idEstabelecimento: number | null;
 }

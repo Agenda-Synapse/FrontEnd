@@ -2,7 +2,7 @@ import { NgModule,} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CadastropropRoutingModule } from './cadastroprop-routing.module';
-import { CadastropropComponent, } from './cadastroprop.component';
+import { CadastropropComponent } from './CadastropropComponent';
 import { NgxMaskDirective, NgxMaskPipe } from 'ngx-mask';
 
 

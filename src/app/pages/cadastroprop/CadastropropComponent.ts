@@ -3,9 +3,11 @@ import {
   FormBuilder,
   FormGroup,
   Validators,
-  AbstractControl,
+  AbstractControl
 } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ProprietarioService } from 'src/app/shared/service/proprietario.service';
+
 
 @Component({
   selector: 'app-cadastroprop',
@@ -15,8 +17,7 @@ import { Router } from '@angular/router';
 export class CadastropropComponent implements OnInit {
   currentContainer: number = 1;
   imagEmBase64!: string;
-  maskCpfCnpj: string = '000.000.000-00'
-
+  errorMsg!: string;
   step1Form!: FormGroup;
   step2Form!: FormGroup;
   step3Form!: FormGroup;
@@ -25,7 +26,7 @@ export class CadastropropComponent implements OnInit {
   isImageSelected: boolean = false;
   isFormTouched: boolean = false;
 
-  constructor(private fb: FormBuilder, private router: Router) {}
+  constructor(private fb: FormBuilder, private router: Router, private crateService: ProprietarioService) { }
 
   ngOnInit(): void {
     this.step1Form = this.fb.group(
@@ -57,7 +58,7 @@ export class CadastropropComponent implements OnInit {
 
   passwordMatchValidator(
     control: AbstractControl
-  ): { [key: string]: boolean } | null {
+  ): { [key: string]: boolean; } | null {
     const senha = control.get('senha');
     const confirmarSenha = control.get('confirmarSenha');
     if (senha && confirmarSenha && senha.value !== confirmarSenha.value) {
@@ -106,7 +107,8 @@ export class CadastropropComponent implements OnInit {
 
     if (this.currentContainer === 1) {
       if (this.isStep1Complete()) {
-        console.log('primeira parte do form', this.step1Form.value);
+        // console.log('primeira parte do form', this.step1Form.value);
+        this.submitStep1();
 
         this.currentContainer = 2;
       } else {
@@ -182,8 +184,27 @@ export class CadastropropComponent implements OnInit {
     } else {
       return [/[0-9]/, /[0-9]/, '.', /[0-9]/, /[0-9]/, /[0-9]/, '.', /[0-9]/, /[0-9]/, /[0-9]/, '/', /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, '-', /[0-9]/, /[0-9]/];
     }
+  };
+
+  steps: number = 1;
+
+  submitStep1() {
+    const formValue = {
+      nome: this.step1Form.get('nome')!.value,
+      email: this.step1Form.get('email')!.value,
+      senha: this.step1Form.get('confirmarSenha')!.value,
+      cpfOuCnpj: this.step1Form.get('documentos')!.value,
+      telefone: this.step1Form.get('telefone')!.value,
+      cargo: "proprietario",
+      idEstabelecimento: null
+    };
+
+    const formSave = JSON.stringify(formValue)
+
+    if (this.step1Form.valid) {
+      localStorage.setItem('form1', formSave)
+    } else {
+      console.log("Formulário inválido...");
+    }
   }
-
-
-  }
-
+}
