@@ -1,7 +1,7 @@
 <div class="container-1">
   <div class="topo">
     <button class="Voltar" routerLink="/home">Voltar</button>
-  
+
     <div class="topo-meio">
       <h2 class="title">Barberaria da Mari</h2>
       <div class="infos-top">
@@ -9,132 +9,96 @@
           <p class="day">Seg - Sex</p>
           <p class="hr">08:00 - 22:00</p>
         </div>
-        <p class="status">
-          ABERTO
-        </p>
+        <p class="status">ABERTO</p>
       </div>
     </div>
     <div class="perfil-barbeiro">
       <img src="../../../assets/Barbearia Mari.png" alt="fotoBarbeiro" />
       <div class="topedit">
-        <button class="editpht" > 
-          <img src=" ../../../assets/Lapiseditar.svg" alt="botãoditarfoto">
+        <button class="editpht">
+          <img src=" ../../../assets/Lapiseditar.svg" alt="botãoditarfoto" />
         </button>
+      </div>
     </div>
-  </div>
   </div>
 </div>
 <div class="container-2">
-  <div class="infos">
+
     <div class="left">
       <div class="barbearia">
         <img src="../../../assets/Barbearia.png" alt="fotoBarbearia" />
         <div class="editrem">
-          <img src="../../../assets/remover.svg" alt="botaoremover">
+          <img src="../../../assets/remover.svg" alt="botaoremover" />
         </div>
+        </div>
+      <div class="serviços">
+        <div class="cards-left">
+          <h1>Serviços</h1>
+          <div class="card" *ngFor="let service of services; let i = index">
+            <div [ngClass]="'card-service-' + (i + 1)">
+              <p class="categs">Serviços</p>
+              <h2 class="specs">{{ service.name }}</h2>
+            </div>
+            <div [ngClass]="'card-time-' + (i + 1)">
+              <p class="categs">Tempo</p>
+              <p class="values">{{ service.time }}</p>
+            </div>
+            <div [ngClass]="'card-price-' + (i + 1)">
+              <p class="categs">Preço</p>
+              <p class="values">{{ service.price }}</p>
+            </div>
+            <div [ngClass]="'editrem' + (i + 1)">
+              <img src="../../../assets/remover.svg" alt="botaoremover" />
+              <div class="editcard">
+                <img
+                  src=" ../../../assets/Lapiseditar.svg"
+                  alt="botãoditarfoto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
     <div class="right">
       <div class="infos-fotos">
         <div class="ferramentas">
           <img src="../../../assets/Ferramentas.png" alt="ferramentas" />
           <div class="editrem">
-            <img src="../../../assets/remover.svg" alt="botaoremover">
+            <img src="../../../assets/remover.svg" alt="botaoremover" />
           </div>
-        </div>  
+        </div>
         <div class="corte">
           <img src="../../../assets/Corte.png" alt="corte" />
           <div class="editrem">
-            <img src="../../../assets/remover.svg" alt="botaoremover">
+            <img src="../../../assets/remover.svg" alt="botaoremover" />
           </div>
-        </div> 
+        </div>
         <div class="espelhos">
           <img src="../../../assets/Espelhos.png" alt="espelhos" />
           <div class="editrem">
-            <img src="../../../assets/remover.svg" alt="botaoremover">
+            <img src="../../../assets/remover.svg" alt="botaoremover" />
           </div>
-      </div>
+        </div>
 
-      <div class="buttonfotos">
-        <button class="addfotos">
-          <img src=" ../../../assets/addbutton.svg" alt="">
-        </button>
-        <p>Adicionar Fotos</p>
+        <div class="buttonfotos">
+          <button class="addfotos">
+            <img src=" ../../../assets/addbutton.svg" alt="" />
+          </button>
+          <p>Adicionar Fotos</p>
+        </div>
       </div>
-  
-      <!-- <div class="info-textos">
+      <div class="info-textos">
         <p>Localização</p>
-  
-        <h2>Rua João Aquiles Pinto</h2>
-      </div> -->
-    </div>
-  </div>
-</div>
 
-<div class="container-3">
-  <div class="serviços">
-    <div class="cards-left">
-      <h1>Serviços</h1>
-      <div class="card-1">
-        <div class="card-service-1">
-          <p class="categs">Serviços</p>
-          <h2 class="specs">Corte degrade</h2>
-        </div>
-        <div class="card-time-1">
-          <p class="categs">Tempo</p>
-          <p class="values">01:00</p>
-        </div>
-        <div class="card-price-1">
-          <p class="categs">Preço</p>
-          <p class="values">30,00</p>
-        </div>
+        <h2>Rua João Aquiles Pinto</h2>
       </div>
-      <div class="card-2">
-        <div class="card-service-2">
-          <p class="categs">Serviços</p>
-          <h2 class="specs">Corte degrade</h2>
-        </div>
-        <div class="card-time-2">
-          <p class="categs">Tempo</p>
-          <p class="values">01:00</p>
-        </div>
-        <div class="card-price-2">
-          <p class="categs">Preço</p>
-          <p class="values">30,00</p>
-        </div>
-      </div>
-    </div>
-  
-    <div class="cards-right">
-      <div class="card-3">
-        <div class="card-service-3">
-          <p class="categs">Serviços</p>
-          <h2 class="specs">Corte degrade</h2>
-        </div>
-        <div class="card-time-3">
-          <p class="categs">Tempo</p>
-          <p class="values">01:00</p>
-        </div>
-        <div class="card-price-3">
-          <p class="categs">Preço</p>
-          <p class="values">30,00</p>
-        </div>
-      </div>
-      <div class="card-4">
-        <div class="card-service-4">
-          <p class="categs">Serviços</p>
-          <h2 class="specs">Barba</h2>
-        </div>
-        <div class="card-time-4">
-          <p class="categs">Tempo</p>
-          <p class="values">01:00</p>
-        </div>
-        <div class="card-price-4">
-          <p class="categs">Preço</p>
-          <p class="values">30,00</p>
-        </div>
+      <div class="buttonservicos">
+        <button class="addservicos">
+          <img src=" ../../../assets/addbutton.svg" alt="" />
+        </button>
+        <p>Adicionar Serviços</p>
       </div>
     </div>
   </div>
-  
-</div>
+

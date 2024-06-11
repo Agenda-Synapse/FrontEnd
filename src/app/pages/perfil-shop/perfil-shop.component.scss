@@ -30,9 +30,6 @@
     height: 200px;
     display: flex;
 
-    //    align-items: right; /* Centraliza verticalmente a imagem */
-    //    padding-right: 10px; /* Espaçamento à direita para a imagem */
-
     img {
       height: 100%;
       width: 100%;
@@ -47,40 +44,40 @@
     align-items: center;
     height: 85%;
 
-    .title{
+    .title {
       font-size: 5vh;
       font-family: var(--second-font);
       font-weight: 500;
       color: var(--bg-princi);
     }
 
-    .infos-top{
+    .infos-top {
       display: flex;
       align-items: center;
       justify-content: space-evenly;
       width: -webkit-fill-available;
       margin-top: 3rem;
 
-      .infos-dh{
+      .infos-dh {
         display: flex;
         flex-direction: column;
         color: var(--bg-princi);
         font-family: var(--second-font);
 
-        .day{
+        .day {
           font-size: 2.25vh;
           font-weight: 300;
         }
 
-        .hr{
+        .hr {
           font-size: 3.5vh;
         }
       }
 
-      .status{
+      .status {
         color: var(--bg-princi);
         font-family: var(--second-font);
-        border-radius: .5rem;
+        border-radius: 0.5rem;
         padding: 2vh 2vw;
         background-color: var(--green);
       }
@@ -88,19 +85,11 @@
   }
 }
 
-.infos {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  height: 45vh;
-  width: calc(100vw - 28px);
-  // border: solid 1px #ff0000;
-  padding: 8px;
+.container-2{
 
   .left {
     height: 90%;
     width: 40%;
-    // border: solid 1px yellow;
     border-radius: 2rem;
 
     .barbearia {
@@ -108,17 +97,16 @@
       padding: 3px;
       padding-right: 10%;
       outline: none;
-      width: 100%;
+      width: 50%;
       height: 100%;
       display: flex;
 
       img {
-        height: 100%;
-        width: 100%;
+        height: 30%;
+        width: 30%;
         object-fit: cover;
         border-radius: 24px;
       }
-     
     }
   }
 
@@ -198,7 +186,7 @@
       }
     }
   }
-}
+
 
 .serviços {
   display: flex;
@@ -224,16 +212,16 @@
     padding-top: 50px;
     padding-right: 20px;
 
-    .categs{
+    .categs {
       font-family: var(--second-font);
     }
 
-    .specs{
+    .specs {
       font-family: var(--fourth-font);
       font-weight: 400;
     }
 
-    .values{
+    .values {
       font-family: var(--fourth-font);
       font-weight: 400;
     }
@@ -253,7 +241,6 @@
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-
       }
 
       .card-time-1 {
@@ -322,16 +309,16 @@
     width: 50%;
     padding-top: 100px;
 
-    .categs{
+    .categs {
       font-family: var(--second-font);
     }
 
-    .specs{
+    .specs {
       font-family: var(--fourth-font);
       font-weight: 400;
     }
 
-    .values{
+    .values {
       font-family: var(--fourth-font);
       font-weight: 400;
     }
@@ -409,3 +396,7 @@
     }
   }
 }
+
+}
+
+  
