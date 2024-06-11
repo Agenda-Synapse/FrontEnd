@@ -17,3 +17,10 @@ export interface Proprietario {
   cargo: string;
   idEstabelecimento: number | null;
 }
+
+export interface Estabelecimento {
+  nome: string
+  imagem: string
+  endereco: string
+  categoria: string
+}

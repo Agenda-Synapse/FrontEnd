@@ -15,7 +15,7 @@ import { ProprietarioService } from 'src/app/shared/service/proprietario.service
   styleUrls: ['./cadastroprop.component.scss'],
 })
 export class CadastropropComponent implements OnInit {
-  currentContainer: number = 1;
+  currentContainer: number = 2;
   imagEmBase64!: string;
   errorMsg!: string;
   step1Form!: FormGroup;
@@ -44,12 +44,11 @@ export class CadastropropComponent implements OnInit {
     this.step2Form = this.fb.group({
       nomeEstabelecimento: ['', Validators.required],
       endereco: ['', Validators.required],
-
+      areaAtuacao: ['', Validators.required],
       imagem: [''],
     });
 
     this.step3Form = this.fb.group({
-      areaAtuacao: ['', Validators.required],
       inicioTurno1: ['', Validators.required],
       terminoTurno1: ['', Validators.required],
       diasTurno1: ['', Validators.required],
@@ -109,8 +108,10 @@ export class CadastropropComponent implements OnInit {
       if (this.isStep1Complete()) {
         // console.log('primeira parte do form', this.step1Form.value);
         this.submitStep1();
+        if(this.submitStep1()!){
+          this.currentContainer = 2;
+        }
 
-        this.currentContainer = 2;
       } else {
         this.showError = true;
         this.validateAllFormFields(this.step1Form);
@@ -118,8 +119,11 @@ export class CadastropropComponent implements OnInit {
     } else if (this.currentContainer === 2) {
       this.showImageError = !this.isImageSelected;
       if (this.isStep2Complete()) {
-        console.log('Segunda parte do form', this.step2Form.value);
-        this.currentContainer = 3;
+        // console.log('Segunda parte do form', this.step2Form.value);
+        this.submitStep2()
+        if(this.submitStep2()!){
+          this.currentContainer = 3;
+        }
       } else {
         this.showError = true;
         this.validateAllFormFields(this.step2Form);
@@ -205,6 +209,25 @@ export class CadastropropComponent implements OnInit {
       localStorage.setItem('form1', formSave)
     } else {
       console.log("Formulário inválido...");
+    }
+  }
+
+  submitStep2() {
+    const formValue = {
+      nome: this.step2Form.get('nomeEstabelecimento')!.value,
+      imagem: this.step2Form.get('imagem')!.value,
+      endereco: this.step2Form.get('endereco')!.value,
+      categoria: this.step2Form.get('areaAtuacao')!.value
+    };
+
+    const formSave = JSON.stringify(formValue)
+
+    if (this.step1Form.valid) {
+      localStorage.setItem('form2', formSave)
+      return true
+    } else {
+      console.log("Formulário inválido...");
+      return false
     }
   }
 }

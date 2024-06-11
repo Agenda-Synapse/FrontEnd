@@ -230,8 +230,23 @@
           border-color: lightgray;
           box-shadow: 0 4px 4px 0 #0000003b;
         }
+        
+        label {
+          padding-left: 10px;
+        }
 
+        .form-control {
+          padding: 10px;
+          width: 100%;
+          border-radius: 4px;
+          background-color: white;
+          border-color :var(--bg-princi);
+          box-shadow: 1px 4px 4px 1px #0000003b;
+        }
       }
+
+
+
     }
 
     .adicionarfoto {

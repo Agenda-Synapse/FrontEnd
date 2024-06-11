@@ -116,6 +116,20 @@
         </div>
 
         <div class="Box-forms">
+          <label for="areaAtuacao">Área de Atuação</label>
+          <select class="form-control" formControlName="areaAtuacao" id="areaAtuacao">
+            <option value="" disabled selected>Selecione a Área de Atuação</option>
+            <option value="unhas">Unhas</option>
+            <option value="barbearia">Barbearia</option>
+            <option value="maquiagem">Maquiagem</option>
+            <option value="salão de beleza">Salão de Beleza</option>
+          </select>
+          <div *ngIf="step2Form.get('areaAtuacao')!.invalid && step2Form.get('areaAtuacao')!.touched" class="error">
+            Área de Atuação é obrigatória
+          </div>
+        </div>
+
+        <div class="Box-forms">
           <label for="endereço">Endereço</label>
           <input type="text" class="form-control" formControlName="endereco" (input)="formatarNome($event)" />
           <div *ngIf="step2Form.get('endereco')!.invalid && step2Form.get('endereco')!.touched" class="error">
@@ -127,8 +141,8 @@
       </form>
     </div>
     <div class="adicionarfoto">
-      <input type="file" id="fileInput" (change)="onFileSelected($event)" style="display: none" />
-      <button type="button" class="buttonadicionarfoto">
+      <input #fileup type="file" id="fileInput" (change)="onFileSelected($event)" style="display: none;" />
+      <button type="button" class="buttonadicionarfoto" (click)="fileup.click()">
         <img class="adicionar" src="../../../assets/addbutton.svg" alt="botaoadicionar" />
       </button>
       <p>Insira uma imagem do seu Estabelecimento</p>
@@ -180,19 +194,7 @@
   <div class="cadastro-principal-3">
     <div class="cadastro-funcionamento">
       <form [formGroup]="step3Form">
-        <div class="Box-select">
-          <label for="areaAtuacao">Área de Atuação</label>
-          <select class="form-control" formControlName="areaAtuacao" id="areaAtuacao">
-            <option value="" disabled selected>Selecione a Área de Atuação</option>
-            <option value="area1">Unhas</option>
-            <option value="area2">Barbearia</option>
-            <option value="area3">Maquiagem</option>
-            <option value="area4">Salão de Beleza</option>
-          </select>
-          <div *ngIf="step3Form.get('areaAtuacao')!.invalid && step3Form.get('areaAtuacao')!.touched" class="error">
-            Área de Atuação é obrigatória
-          </div>
-        </div>
+
 
         <div class="horariosfun">
           <p>Funcionamento</p>
