@@ -13,89 +13,78 @@
       </div>
     </div>
     <div class="perfil-barbeiro">
-      <img src="../../../assets/Barbearia Mari.png" alt="fotoBarbeiro" />
+      <img [src]="perfilBarbeiroPhoto.src" [alt]="perfilBarbeiroPhoto.alt" />
       <div class="topedit">
-        <button class="editpht">
-          <img src=" ../../../assets/Lapiseditar.svg" alt="botãoditarfoto" />
+        <button class="editpht" (click)="triggerPerfilBarbeiroFileInput()">
+          <img src="../../../assets/Lapiseditar.svg" alt="botãoditarfoto" />
         </button>
       </div>
     </div>
+    <input type="file" #perfilBarbeiroFileInput (change)="onPerfilBarbeiroFileSelected($event)" style="display: none;" />
   </div>
 </div>
-<div class="container-2">
 
-    <div class="left">
-      <div class="barbearia">
-        <img src="../../../assets/Barbearia.png" alt="fotoBarbearia" />
-        <div class="editrem">
-          <img src="../../../assets/remover.svg" alt="botaoremover" />
-        </div>
-        </div>
-      <div class="serviços">
-        <div class="cards-left">
-          <h1>Serviços</h1>
-          <div class="card" *ngFor="let service of services; let i = index">
-            <div [ngClass]="'card-service-' + (i + 1)">
-              <p class="categs">Serviços</p>
-              <h2 class="specs">{{ service.name }}</h2>
-            </div>
-            <div [ngClass]="'card-time-' + (i + 1)">
-              <p class="categs">Tempo</p>
-              <p class="values">{{ service.time }}</p>
-            </div>
-            <div [ngClass]="'card-price-' + (i + 1)">
-              <p class="categs">Preço</p>
-              <p class="values">{{ service.price }}</p>
-            </div>
-            <div [ngClass]="'editrem' + (i + 1)">
-              <img src="../../../assets/remover.svg" alt="botaoremover" />
-              <div class="editcard">
-                <img
-                  src=" ../../../assets/Lapiseditar.svg"
-                  alt="botãoditarfoto"
-                />
-              </div>
+<div class="container-2">
+  <div class="left">
+    <div class="barbearia" *ngFor="let barbearia of barbeariaPhotos; let i = index">
+      <img [src]="barbearia.src" [alt]="barbearia.alt" />
+      <div class="editrem">
+        <img src="../../../assets/remover.svg" alt="botaoremover" (click)="removeBarbeariaPhoto(i)" />
+      </div>
+      <div class="editrem">
+        <img src="../../../assets/Lapiseditar.svg" alt="botãoditarfoto" (click)="triggerEditFileInput(i)" />
+      </div>
+    </div>
+    <input type="file" #editFileInput (change)="onEditFileSelected($event)" style="display: none;" />
+    <div class="serviços">
+      <div class="cards-left">
+        <h1>Serviços</h1>
+        <div class="card" *ngFor="let service of services; let i = index">
+          <div class="card-service">
+            <p class="categs">Serviços</p>
+            <h2 class="specs">{{ service.name }}</h2>
+          </div>
+          <div class="card-time">
+            <p class="categs">Tempo</p>
+            <p class="values">{{ service.time }}</p>
+          </div>
+          <div class="card-price">
+            <p class="categs">Preço</p>
+            <p class="values">{{ service.price }}</p>
+          </div>
+          <div class="editrem">
+            <img src="../../../assets/remover.svg" alt="botaoremover" (click)="removeService(i)" />
+            <div class="editcard">
+              <img src="../../../assets/Lapiseditar.svg" alt="botãoditarfoto" (click)="editService(i)" />
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="right">
-      <div class="infos-fotos">
-        <div class="ferramentas">
-          <img src="../../../assets/Ferramentas.png" alt="ferramentas" />
-          <div class="editrem">
-            <img src="../../../assets/remover.svg" alt="botaoremover" />
-          </div>
-        </div>
-        <div class="corte">
-          <img src="../../../assets/Corte.png" alt="corte" />
-          <div class="editrem">
-            <img src="../../../assets/remover.svg" alt="botaoremover" />
-          </div>
-        </div>
-        <div class="espelhos">
-          <img src="../../../assets/Espelhos.png" alt="espelhos" />
-          <div class="editrem">
-            <img src="../../../assets/remover.svg" alt="botaoremover" />
-          </div>
-        </div>
-
-        <div class="buttonfotos">
-          <button class="addfotos">
-            <img src=" ../../../assets/addbutton.svg" alt="" />
-          </button>
-          <p>Adicionar Fotos</p>
+  </div>
+  <div class="right">
+    <div class="infos-fotos">
+      <div *ngFor="let photo of photos; let i = index" class="photo">
+        <img [src]="photo.src" [alt]="photo.alt" />
+        <div class="editrem">
+          <img src="../../../assets/remover.svg" alt="botaoremover" (click)="removePhoto(i)" />
         </div>
       </div>
+      <div class="buttonfotos">
+        <button (click)="triggerFileInput()">
+          <img src="../../../assets/addbutton.svg" alt="Adicionar Foto" />
+        </button>
+        <p>Adicionar Fotos</p>
+        <input type="file" #fileInput (change)="onFileSelected($event)" style="display: none;" />
+      </div>
+    </div>
       <div class="info-textos">
         <p>Localização</p>
-
         <h2>Rua João Aquiles Pinto</h2>
       </div>
       <div class="buttonservicos">
-        <button class="addservicos">
-          <img src=" ../../../assets/addbutton.svg" alt="" />
+        <button class="addservicos" (click)="addService()">
+          <img src="../../../assets/addbutton.svg" alt="Adicionar Serviço" />
         </button>
         <p>Adicionar Serviços</p>
       </div>

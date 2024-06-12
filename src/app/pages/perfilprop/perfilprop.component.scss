@@ -119,7 +119,7 @@
   .left {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
 
     .barbearia {
       display: flex;
@@ -140,6 +140,19 @@
           height: 18px;
           width: 14px;
           border-radius: 0%;
+          cursor: pointer;
+        }
+      }
+      .editcard{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+        
+        img{
+          height: 18px;
+          width: 18px;
           cursor: pointer;
         }
       }
@@ -183,34 +196,24 @@
           padding: 20px;
           box-shadow: 1px 1px 1px 2px lightgray;
 
-          .card-service-1,
-          .card-service-2,
-          .card-service-3,
-          .card-service-4 {
+          .card-service {
             display: flex;
             flex-direction: column;
             gap: 4rem;
           }
-          .card-time-1,
-          .card-time-2,
-          .card-time-3,
-          .card-time-4 {
+          .card-time {
             display: flex;
             flex-direction: column;
             gap: 4rem;
           }
-          .card-price-1,
-          .card-price-2,
-          .card-price-3,
-          .card-price-4 {
+
+          .card-price {
             display: flex;
             flex-direction: column;
             gap: 4rem;
           }
-          .editrem1,
-          .editrem2,
-          .editrem3,
-          .editrem4 {
+
+          .editrem {
             height: 0.6rem;
             width: 2.8rem;
             display: flex;
@@ -223,6 +226,7 @@
             img {
               height: 18px;
               width: 18px;
+              cursor: pointer;
             }
           }
         }
@@ -233,9 +237,8 @@
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    gap: 80px;
+    gap: 180px;
 
     .infos-fotos {
       display: flex;
@@ -250,9 +253,9 @@
 
       background-color: var(--bg-princi);
 
-      .ferramentas,
-      .corte,
-      .espelhos {
+
+
+      .photo {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -279,19 +282,8 @@
           }
         }
       }
-      .buttonservicos {
-        font-family: var(--second-font);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-
-        .addservicos {
-          height: 18vh;
-          margin: 10px;
-        }
+      
       }
-    }
     .info-textos {
       height: 14vh;
       width: 28vw;
@@ -304,6 +296,18 @@
       h2 {
         font-family: var(--fourth-font);
         font-weight: 400;
+      }
+    }
+    .buttonservicos {
+      font-family: var(--second-font);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      .addservicos {
+        height: 18vh;
+        margin: 10px;
       }
     }
   }
